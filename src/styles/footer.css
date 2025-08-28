@@ -71,4 +71,24 @@ footer {
 #footer_subscribe {
     display: flex;
     flex-direction: column;
+    gap: 1.5rem;
+}
+
+#footer_subscribe p {
+    color: gray;
+}
+
+#input_group {
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+}
+
+input_group input{
+    all: unset;
+    padding: 0.75rem;
+}
+
+input_group button {
+    background-color: gray;
 }
