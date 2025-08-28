@@ -3,6 +3,7 @@
 @import url('home.css');
 @import url('menu.css');
 @import url('footer.css');
+@import url('carrinho.css');
 
 * {
     font-family: 'Poppins', sans-serif;
