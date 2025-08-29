@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <title>Restaurante Tag</title>
+    <link rel="stylesheet" href="index2.css" />
+  </head>
+  <body>
+    <header>
+      <nav id="navbar">
+        <i class="fa-solid fa-burger" id="nav_logo">
+          Menutag <span><i class="fa-solid fa-code"></i></span
+        ></i>
+
+        <ul id="nav_list">
+          <li class="nav-item active">
+            <a href="#home">Início</a>
+          </li>
+          <li class="nav-item">
+            <a href="#menu">Cardápio</a>
+          </li>
+          <li class="nav-item">
+            <a href="#testimonials">Sobre</a>
+          </li>
+        </ul>
+
+        <button class="cart-btn">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-count">0</span>
+        </button>
+
+        <button id="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </header>
+
+    <main id="content">
+      <div class="slider-container">
+        <div class="slides">
+          <div class="slide active">
+            <img src="image/download (1).jfif" alt="Imagem 1" />
+            <div class="slide-overlay">
+              <h2 class="slide-title">Restaurante Tag</h2>
+              <p class="slide-subtitle">
+                Pratique HTML enquanto saboreia nossas delícias
+              </p>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="image/download (1).png" alt="Imagem 2" />
+            <div class="slide-overlay">
+              <h2 class="slide-title">Cardápio Especial</h2>
+              <p class="slide-subtitle">
+                Tags HTML organizadas em categorias deliciosas
+              </p>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="image/download.jfif" alt="Imagem 3" />
+            <div class="slide-overlay">
+              <h2 class="slide-title">Aprenda com Sabor</h2>
+              <p class="slide-subtitle">
+                Combine conhecimento e gastronomia em uma experiência única
+              </p>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="image/images.jfif" alt="Imagem 4" />
+            <div class="slide-overlay">
+              <h2 class="slide-title">Ambiente Codificado</h2>
+              <p class="slide-subtitle">
+                Um espaço onde cada detalhe remete ao desenvolvimento web
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="slider-arrows">
+          <div class="arrow prev"><i class="fas fa-chevron-left"></i></div>
+          <div class="arrow next"><i class="fas fa-chevron-right"></i></div>
+        </div>
+
+        <div class="slider-controls">
+          <div class="slider-dot active"></div>
+          <div class="slider-dot"></div>
+          <div class="slider-dot"></div>
+          <div class="slider-dot"></div>
+        </div>
+      </div>
+      <section id="menu">
+        <h2 class="section-title">Tags mais populares</h2>
+        <h3 class="section-subtitle">
+          Clique e veja abaixo as tags mais populares
+        </h3>
+
+        <div class="dishes-container">
+          <article class="dish">
+            <div class="dish-info">
+              <h3>&lt;Entrada&gt;</h3>
+              <p>Doctype html, html, head, title</p>
+              <div class="dish-price">Tags Básicas</div>
+            </div>
+            <a href="entrada.html" class="add-to-cart-btn">
+              <i class="fas fa-cart-plus"></i> Pedir
+            </a>
+          </article>
+
+          <article class="dish">
+            <div class="dish-info">
+              <h3>&lt;Prato Principal&gt;</h3>
+              <p>h1 a h6, p, img, a, lista</p>
+              <div class="dish-price">Conteúdo Visível</div>
+            </div>
+            <a href="prato.html" class="add-to-cart-btn">
+              <i class="fas fa-cart-plus"></i> Pedir
+            </a>
+          </article>
+
+          <article class="dish">
+            <div class="dish-info">
+              <h3>&lt;body&gt;</h3>
+              <p>Estrutura principal do documento</p>
+              <div class="dish-price">Corpo</div>
+            </div>
+            <a href="prato.html" class="add-to-cart-btn">
+              <i class="fas fa-cart-plus"></i> Pedir
+            </a>
+          </article>
+        </div>
+      </section>
+      <section id="menu">
+        <h2 class="section-title">Cardápio de Tags</h2>
+        <h3 class="section-subtitle">
+          Pratique pedindo as tags HTML essenciais
+        </h3>
+
+        <div class="dishes-container">
+          <article class="dish">
+            <div class="dish-info">
+              <h3>&lt;Entrada&gt;</h3>
+              <p>Doctype html, html, head, title</p>
+              <div class="dish-price">Tags Básicas</div>
+            </div>
+            <a href="entrada.html" class="add-to-cart-btn">
+              <i class="fas fa-cart-plus"></i> Pedir
+            </a>
+          </article>
+
+          <article class="dish">
+            <div class="dish-info">
+              <h3>&lt;Prato Principal&gt;</h3>
+              <p>h1 a h6, p, img, a, lista</p>
+              <div class="dish-price">Conteúdo Visível</div>
+            </div>
+            <a href="prato.html" class="add-to-cart-btn">
+              <i class="fas fa-cart-plus"></i> Pedir
+            </a>
+          </article>
+
+          <article class="dish">
+            <div class="dish-info">
+              <h3>&lt;body&gt;</h3>
+              <p>Estrutura principal do documento</p>
+              <div class="dish-price">Corpo</div>
+            </div>
+            <a href="prato.html" class="add-to-cart-btn">
+              <i class="fas fa-cart-plus"></i> Pedir
+            </a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div id="footer_content">
+        <div id="footer_contacts">
+          <h1>Sobre</h1>
+          <p>
+            Projeto para aprender tags básicas de HTML e CSS de forma saborosa.
+          </p>
+
+          <div id="footer_social_media">
+            <a href="#" class="footer-link" id="instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="#" class="footer-link" id="facebook">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+
+            <a href="#" class="footer-link" id="whatsapp">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+
+        <ul class="footer-list">
+          <li>
+            <h3>Navegação</h3>
+          </li>
+          <li>
+            <a href="#home" class="footer-link">Início</a>
+          </li>
+          <li>
+            <a href="#menu" class="footer-link">Cardápio</a>
+          </li>
+          <li>
+            <a href="#testimonials" class="footer-link">Sobre</a>
+          </li>
+        </ul>
+
+        <ul class="footer-list">
+          <li>
+            <h3>Tags</h3>
+          </li>
+          <li>
+            <a href="#" class="footer-link">HTML</a>
+          </li>
+          <li>
+            <a href="#" class="footer-link">CSS</a>
+          </li>
+          <li>
+            <a href="#" class="footer-link">JavaScript</a>
+          </li>
+        </ul>
+
+        <div id="footer_subscribe">
+          <h3>Inscreva-se</h3>
+
+          <p>
+            Digite seu e-mail para receber novidades sobre nosso cardápio de
+            tags.
+          </p>
+
+          <div id="input_group">
+            <input type="email" id="email" placeholder="Seu e-mail" />
+            <button>
+              <i class="fa-regular fa-envelope"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div id="footer_copyright">
+        © 2025 Todos os direitos reservados - Restaurante Tag
+      </div>
+    </footer>
+
+    <script>
+      // Header scroll effect
+      window.addEventListener("scroll", function () {
+        const header = document.querySelector("header");
+        if (window.scrollY > 50) {
+          header.classList.add("scrolled");
+        } else {
+          header.classList.remove("scrolled");
+        }
+      });
+
+      // Mobile menu toggle
+      document
+        .getElementById("mobile-menu-btn")
+        .addEventListener("click", function () {
+          document.getElementById("nav_list").classList.toggle("mobile-open");
+        });
+
+      // Slider functionality
+      document.addEventListener("DOMContentLoaded", function () {
+        const slides = document.querySelectorAll(".slide");
+        const dots = document.querySelectorAll(".slider-dot");
+        const prevBtn = document.querySelector(".arrow.prev");
+        const nextBtn = document.querySelector(".arrow.next");
+        let currentSlide = 0;
+        let slideInterval;
+
+        function showSlide(n) {
+          slides.forEach((slide) => slide.classList.remove("active"));
+          dots.forEach((dot) => dot.classList.remove("active"));
+
+          currentSlide = (n + slides.length) % slides.length;
+
+          slides[currentSlide].classList.add("active");
+          dots[currentSlide].classList.add("active");
+        }
+
+        function nextSlide() {
+          showSlide(currentSlide + 1);
+        }
+
+        function startSlideShow() {
+          slideInterval = setInterval(nextSlide, 5000);
+        }
+
+        // Click events for dots
+        dots.forEach((dot, index) => {
+          dot.addEventListener("click", () => {
+            clearInterval(slideInterval);
+            showSlide(index);
+            startSlideShow();
+          });
+        });
+
+        // Arrow controls
+        prevBtn.addEventListener("click", () => {
+          clearInterval(slideInterval);
+          showSlide(currentSlide - 1);
+          startSlideShow();
+        });
+
+        nextBtn.addEventListener("click", () => {
+          clearInterval(slideInterval);
+          showSlide(currentSlide + 1);
+          startSlideShow();
+        });
+
+        // Initialize slideshow
+        startSlideShow();
+
+        // ScrollReveal animations
+        ScrollReveal().reveal(".section-title, .section-subtitle", {
+          delay: 200,
+          origin: "top",
+          distance: "30px",
+          duration: 800,
+          easing: "ease-in-out",
+        });
+
+        ScrollReveal().reveal(".dish", {
+          delay: 300,
+          origin: "bottom",
+          distance: "30px",
+          duration: 800,
+          interval: 200,
+          easing: "ease-in-out",
+          beforeReveal: function (el) {
+            el.classList.add("animated");
+          },
+        });
+
+        // Cart functionality
+        const cartButtons = document.querySelectorAll(".add-to-cart-btn");
+        const cartCount = document.querySelector(".cart-count");
+        let count = 0;
+
+        cartButtons.forEach((button) => {
+          button.addEventListener("click", function (e) {
+            e.preventDefault();
+            count++;
+            cartCount.textContent = count;
+
+            // Animation effect
+            cartCount.parentNode.classList.add(
+              "animate__animated",
+              "animate__bounceIn"
+            );
+            setTimeout(() => {
+              cartCount.parentNode.classList.remove(
+                "animate__animated",
+                "animate__bounceIn"
+              );
+            }, 1000);
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
