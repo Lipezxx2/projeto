@@ -1,11 +1,11 @@
 footer {
-    background-color: rgb(255, 255, 255);
+    background-color: var(--color-footer);
     width: 100%;
-    color: black;
+    color: white;
 }
 
 #footer_content {
-    background-color: white;
+    background-color: var(--color-footer);
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     padding: 3rem 3.5rem;
@@ -60,12 +60,12 @@ footer {
 }
 
 .footer-list .footer-link {
-    color: black;
+    color: var(--cplor-card-bg);
      transition: all 0.4s;
 }
 
 .footer-list .footer-link:hover {
-    color: gray;
+    color: var(--color-accent);
 }
 
 #footer_subscribe {
@@ -77,6 +77,19 @@ footer {
 #footer_subscribe p {
     color: gray;
 }
+
+#footer_subscribe button {
+    background-color: var(--color-primary);
+    color: white;
+    border-radius: 6px;
+    padding: 8px;
+    border: none;
+  }
+  
+  #footer_subscribe button:hover {
+    background-color: var(--color-accent);
+    color: var(--color-text);
+}  
 
 #input_group {
     display: flex;

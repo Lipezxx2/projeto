@@ -13,7 +13,8 @@
 <body>
     <header>
         <nav id="navbar">
-            <i class="fa-solid fa-burger" id="nav_logo">Menutag</i>
+            <i class="fa-solid fa-burger" id="nav_logo"> Menutag <span><i class="fa-solid fa-code"></i></span></i>
+            
 
             <ul id="nav_list">
                 <li class="nav-item active">
@@ -36,12 +37,40 @@
     </header>
 
     <main id="content">
-        <div class="carrossel">
-            <div class="container" id="img">
-                <img src="image/download (1).jfif" alt="">
-                <img src="image/download (1).png" alt="">
-                <img src="image/download.jfif" alt="">
-                <img src="image/images.jfif" alt="">
+
+        <div class="slider">
+            <div class="slides">
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <input type="radio" name="radio-btn" id="radio4">
+
+                <div class="slide first">
+                    <img src="image/download (1).jfif" alt="imagem 1">
+                </div>
+                <div class="slide">
+                    <img src="image/download (1).png" alt="imagem 2">
+                </div>
+                <div class="slide">
+                    <img src="image/download.jfif" alt="imagem 3">
+                </div>
+                <div class="slide">
+                    <img src="image/images.jfif" alt="imagem 4">
+                </div>
+
+               <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+               </div> 
+            </div>
+
+            <div class="manual-navigation">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
             </div>
         </div>
 
@@ -57,9 +86,10 @@
                             <p>Doctype html, html, head, title</p>
                             <div class="dish-price">Tags Básicas</div>
                         </div>
-                        <button class="add-to-cart-btn">
-                            <i class="fas fa-cart-plus"></i> Pedir 
-                        </button>
+                        <a href="entrada.html" class="add-to-cart-btn">
+                            <i class="fas fa-cart-plus"></i> Pedir
+                        </a>
+                        
                     </article>
             
                     
@@ -69,9 +99,10 @@
                             <p>h1 a h6, p, img, a, lista</p>
                             <div class="dish-price">conteúdo visível</div>
                         </div>
-                        <button class="add-to-cart-btn">
-                            <i class="fas fa-cart-plus"></i> Pedir 
-                        </button>
+                        <a href="prato.html" class="add-to-cart-btn">
+                            <i class="fas fa-cart-plus"></i> Pedir
+                        </a>
+                        
                     </article>
             
                     
@@ -80,9 +111,10 @@
                             <h3>&lt;body&gt;</h3>
                             <div class="dish-price">Corpo</div>
                         </div>
-                        <button class="add-to-cart-btn">
-                            <i class="fas fa-cart-plus"></i> Pedir 
-                        </button>
+                        <a href="prato.html" class="add-to-cart-btn">
+                            <i class="fas fa-cart-plus"></i> Pedir
+                        </a>
+                        
                     </article>
             
                 
@@ -91,9 +123,10 @@
                             <h3>&lt;Sobremesas&gt;</h3>
                             <div class="dish-price">Divisão</div>
                         </div>
-                        <button class="add-to-cart-btn">
-                            <i class="fas fa-cart-plus"></i> Pedir 
-                        </button>
+                        <a href="sobremesa.html" class="add-to-cart-btn">
+                            <i class="fas fa-cart-plus"></i> Pedir
+                        </a>
+                        
                     </article>
                 </div>
         </section>

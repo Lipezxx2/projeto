@@ -1,50 +1,98 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" />
-    <link rel="stylesheet" href="src/styles/styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <title>Restaurante Tag</title>
+  <meta charset="UTF-8">
+  <title>🍝 Prato Principal - Explicação</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .exemplo {
+      border: 2px solid var(--cor-secundaria, #8a2be2);
+      background: #f9f9f9;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 10px;
+    }
+    .codigo {
+      background: #272822;
+      color: #f8f8f2;
+      padding: 0.8rem;
+      border-radius: 8px;
+      font-family: monospace;
+      font-size: 0.9rem;
+      overflow-x: auto;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <nav id="navbar">
-            <i class="fa-solid fa-burger" id="nav_logo"> Menutag</i>
-            <ul id="nav_list">
-                <li class="nav-item active"><a href="#home">Início</a></li>
-                <li class="nav-item"><a href="#menu">Cardápio</a></li>
-                <li class="nav-item"><a href="#testimonials">Sobre</a></li>
-            </ul>
-            <button class="cart-btn">
-                <i class="fas fa-shopping-cart"></i>
-                <span class="cart-count">0</span>
-            </button>
-        </nav>
-    </header>
+  <header>
+    <h1>🍝 Prato Principal</h1>
+    <a href="index.html">⬅ Voltar ao Cardápio</a>
+  </header>
 
-    <main>
-        <h1>Guia HTML</h1>
+  <main>
+    <section>
+      <h2>&lt;h1&gt; até &lt;h6&gt;</h2>
+      <p>São títulos e subtítulos. O <code>&lt;h1&gt;</code> é o mais importante, e o <code>&lt;h6&gt;</code> o menos importante.</p>
+      
+      <div class="exemplo">
+        <h1>Título H1</h1>
+        <h3>Título H3</h3>
+        <h6>Título H6</h6>
+      </div>
 
-        <p>As tags <strong> &lt;h1 até h6 &gt;</strong> são usadas para criar títulos em diferentes níveis de importância, sendo h1 o mais importante e h6 o menos importante.</p>
+      <div class="codigo">
+        &lt;h1&gt;Título H1&lt;/h1&gt;<br>
+        &lt;h3&gt;Título H3&lt;/h3&gt;<br>
+        &lt;h6&gt;Título H6&lt;/h6&gt;
+      </div>
+    </section>
 
-        <p>A tag <strog>&lt;p&gt;</strog> é usada para escrever parágrafos de texto em uma página HTML, organizando o conteúdo de forma legível.</p>
+    <section>
+      <h2>&lt;p&gt;</h2>
+      <p>Cria parágrafos de texto.</p>
 
-        <p>A tag <strong>&lt;img&gt;</strong> é usada para inserir imagens em uma página HTML. O atributo src indica o caminho da imagem e o alt fornece uma descrição caso a imagem não carregue.</p>
+      <div class="exemplo">
+        <p>Esse é um parágrafo de exemplo dentro da página.</p>
+      </div>
 
-        <p>A tag <strong>&lt;a&gt;</strong> é usada para criar links clicáveis em uma página HTML. O atributo href define o endereço para o qual o link vai direcionar.</p>
+      <div class="codigo">
+        &lt;p&gt;Esse é um parágrafo de exemplo&lt;/p&gt;
+      </div>
+    </section>
 
-        <p>As tags <strong>&lt;ul&gt;</strong>, <strong>&lt;ol&gt;</strong> e <strong>&lt;li&gt;</strong> são usadas para listas:</p>
+    <section>
+      <h2>&lt;img&gt;</h2>
+      <p>Insere imagens na página. Exemplo:</p>
 
+      <div class="exemplo">
+        <img src="https://picsum.photos/200" alt="Imagem exemplo">
+      </div>
+
+      <div class="codigo">
+        &lt;img src="https://picsum.photos/200" alt="Imagem exemplo"&gt;
+      </div>
+    </section>
+
+    <section>
+      <h2>&lt;ul&gt; / &lt;ol&gt; / &lt;li&gt;</h2>
+      <p>Usamos listas para organizar itens.</p>
+
+      <div class="exemplo">
         <ul>
-            <li><strong>&lt;ul&gt;</strong> → lista não ordenada (bolinhas).</li>
-            <li><strong>&lt;ol&gt;</strong> → lista ordenada (numerada).</li>
-            <li><strong>&lt;li&gt;</strong> → cada item da lista, usado dentro de <ul> ou <ol>.</li>
+          <li>Pizza</li>
+          <li>Hambúrguer</li>
+          <li>Salada</li>
         </ul>
+      </div>
 
-        <p>Exemplo explicativo: "As tags &lt;ul&gt; e &lt;ol&gt; são usadas para criar listas em HTML: &lt;ul&gt; cria listas com marcadores e &lt;ol&gt; cria listas numeradas. Cada item da lista é colocado dentro da tag &lt;li&gt;."</p>
-    </main>
+      <div class="codigo">
+        &lt;ul&gt;<br>
+        &nbsp;&nbsp;&lt;li&gt;Pizza&lt;/li&gt;<br>
+        &nbsp;&nbsp;&lt;li&gt;Hambúrguer&lt;/li&gt;<br>
+        &nbsp;&nbsp;&lt;li&gt;Salada&lt;/li&gt;<br>
+        &lt;/ul&gt;
+      </div>
+    </section>
+  </main>
 </body>
 </html>

@@ -1,54 +1,91 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="src/styles/styles.css">
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <title>Resutarante tag</title>
+  <meta charset="UTF-8">
+  <title>🍰 Sobremesa - CSS</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .exemplo {
+      border: 2px solid var(--cor-secundaria, #8a2be2);
+      background: #f9f9f9;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 10px;
+    }
+    .codigo {
+      background: #272822;
+      color: #f8f8f2;
+      padding: 0.8rem;
+      border-radius: 8px;
+      font-family: monospace;
+      font-size: 0.9rem;
+      overflow-x: auto;
+    }
+    .caixa {
+      padding: 10px;
+      border: 2px solid #8a2be2;
+      background: #eee;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <nav id="navbar">
-            <i class="fa-solid fa-burger" id="nav_logo">Menutag</i>
+  <header>
+    <h1>🍰 Sobremesas - CSS</h1>
+    <a href="index.html">⬅ Voltar ao Cardápio</a>
+  </header>
 
-            <ul id="nav_list">
-                <li class="nav-item active">
-                    <a href="#home">Início</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#menu">Cardápio</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#testimonials">Sobre</a>
-                </li>
-            </ul>
+  <main>
+    <section>
+      <h2>color</h2>
+      <p>Define a cor do texto.</p>
 
-            <button class="cart-btn">
-                <i class="fas fa-shopping-cart"></i>
-                <span class="cart-count">0</span>
-            </button>
-            
-        
-    </header>
-      
-    <section id="sobremesas" style="padding: 40px;">
-    <h2 style="font-size: 28px; margin-bottom: 20px;">🍰 Sobremesas</h2>
+      <div class="exemplo">
+        <p style="color: red;">Texto em vermelho</p>
+      </div>
 
-    <p><strong>Color:</strong> Define a <strong>cor do texto</strong>. Exemplo: <span style="color: red;">vermelho</span>.</p>
+      <div class="codigo">
+        p { color: red; }
+      </div>
+    </section>
 
-    <p><strong>Background-color:</strong> Define a <strong>cor de fundo</strong> de um elemento. Exemplo: <span style="background-color: yellow;">amarelo</span>.</p>
+    <section>
+      <h2>background-color</h2>
+      <p>Define a cor de fundo.</p>
 
-    <p><strong>Font-size:</strong> Define o <strong>tamanho da fonte</strong> (texto). Exemplo: <span style="font-size: 24px;">texto maior</span>.</p>
+      <div class="exemplo">
+        <div class="caixa" style="background-color: lightblue;">Fundo azul claro</div>
+      </div>
 
-    <p><strong>Margin:</strong> Espaço <strong>fora da borda</strong> do elemento, separando ele de outros. Exemplo: margem entre blocos.</p>
+      <div class="codigo">
+        div { background-color: lightblue; }
+      </div>
+    </section>
 
-    <p><strong>Padding:</strong> Espaço <strong>dentro da borda</strong> do elemento, entre o conteúdo e a borda. Exemplo: espaço interno.</p>
-</section>
+    <section>
+      <h2>border</h2>
+      <p>Define a borda de um elemento.</p>
 
+      <div class="exemplo">
+        <div class="caixa" style="border: 3px dashed green;">Com borda verde tracejada</div>
+      </div>
 
+      <div class="codigo">
+        div { border: 3px dashed green; }
+      </div>
+    </section>
+
+    <section>
+      <h2>font-size</h2>
+      <p>Define o tamanho da fonte.</p>
+
+      <div class="exemplo">
+        <p style="font-size: 24px;">Texto grande</p>
+      </div>
+
+      <div class="codigo">
+        p { font-size: 24px; }
+      </div>
+    </section>
+  </main>
 </body>
 </html>

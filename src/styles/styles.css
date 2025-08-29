@@ -4,6 +4,17 @@
 @import url('menu.css');
 @import url('footer.css');
 
+:root {
+    --color-primary: #e85d04;  
+    --color-secondary: #6a040f; 
+    --color-accent: #ffba08;    
+    --color-bg: #fffaf5;        
+    --color-text: #2b2b2b;     
+    --color-muted: #555555;    
+    --color-card-bg: #ffffff;   
+    --color-footer: #3d3d3d;    
+  }
+
 * {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -11,23 +22,54 @@
     box-sizing: border-box;
 }
 
-.carrosel {
-    box-shadow: 2px 2px 4px black;
+.slider {
+    margin: 0 auto;
+    width: 800px;
+    height: 400px;
     overflow: hidden;
-    height: 300px;
-    width: 300px;
 }
 
-.container {
+.slides{
+    width: 400px;
+    height: 400px;
     display: flex;
-    transition: transform 0.5s ease-in-out;
-    transform: translateX(0);
 }
 
-img {
-    object-fit: cover;
-    height: 300px;
-    width: 300px;
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 25%;
+    position: relative;
+}
+
+.slide img {
+    width: 800px;
+}
+
+.manual-navigation {
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn {
+    border: 2px solid #fff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+
+.manual-btn:hover {
+    background-color: #fff;
 }
 
 .cart-btn {
@@ -38,6 +80,46 @@ img {
     font-size: 24px;
     color: #333;
     margin-left: 20px;
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .first{
+    margin-left: -50%;
+}
+
+#radio4:checked ~ .first{
+    margin-left: -75%;
+}
+
+.navigation-auto div{
+   border: 2px solid #20a6ff; 
+   padding: 5px;
+   border-radius: 10px;
+   cursor: pointer;
+   transition: 1s;
+}
+
+.navigation-auto {
+    position: absolute;
+    width: 800px;
+    margin-top: 360px;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation-auto div:not(:last-child){
+    margin-right: 48px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+    background-color: #fff;
 }
 
 .cart-count {

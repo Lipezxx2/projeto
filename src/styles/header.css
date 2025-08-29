@@ -3,7 +3,7 @@ header {
     padding: 28px 8%;
     position: sticky;
     top: 0;
-    background-color: transparent;
+    background-color: var(--color-primary);
     z-index: 3;
 }
 
@@ -16,6 +16,8 @@ header {
 
 #nav_logo {
     font-size: 24px;
+    color: var(--color-card-bg);
+    font-weight: bold;
 
 }
 
@@ -30,7 +32,7 @@ header {
 
 .nav-item a {
     text-decoration: none;
-    color: #1d1d1dad;
+    color: var(--color-card-bg);
     font-weight: 600;
 }
 
