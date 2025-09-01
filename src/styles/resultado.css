@@ -1,22 +1,301 @@
-   .exemplo {
-      border: 2px solid var(--cor-secundaria, #8a2be2);
-      background: #f9f9f9;
-      padding: 1rem;
-      margin: 1rem 0;
-      border-radius: 10px;
-    }
-    .codigo {
-      background: #272822;
-      color: #f8f8f2;
-      padding: 0.8rem;
-      border-radius: 8px;
-      font-family: monospace;
-      font-size: 0.9rem;
-      overflow-x: auto;
-    }
+/* resultado.css - Estilo padronizado para as páginas de explicação - CORRIGIDO */
 
-     .caixa {
-      padding: 10px;
-      border: 2px solid #8a2be2;
-      background: #eee;
-    }
+/* ===== ESTILOS GERAIS PARA PÁGINAS DE EXPLICAÇÃO ===== */
+body.pagina-explicacao {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  /* Garantir que o conteúdo não fique atrás do header */
+  padding-top: 80px;
+}
+
+.pagina-explicacao header {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: var(--shadow);
+  margin-bottom: 2rem;
+  /* Fixar o header no topo */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.pagina-explicacao header h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.pagina-explicacao header a {
+  color: var(--color-accent);
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+}
+
+.pagina-explicacao header a:hover {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.4);
+  transform: translateX(-5px);
+}
+
+.pagina-explicacao main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1.5rem 3rem;
+  /* Garantir que o conteúdo não fique escondido */
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== SEÇÕES DE EXPLICAÇÃO ===== */
+.pagina-explicacao section {
+  background-color: var(--color-card-bg);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  border-left: 4px solid var(--color-primary);
+  /* Garantir que as seções tenham espaço suficiente */
+  min-height: auto;
+  overflow: visible;
+}
+
+.pagina-explicacao section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.pagina-explicacao section h2 {
+  color: var(--color-primary);
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pagina-explicacao section h2::before {
+  content: "#";
+  color: var(--color-accent);
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.pagina-explicacao section p {
+  color: var(--color-text);
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* ===== ÁREA DE CÓDIGO ===== */
+.pagina-explicacao .codigo {
+  background-color: #2d2d2d;
+  color: #f8f8f2;
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  overflow-x: auto;
+  font-family: 'Courier New', monospace;
+  line-height: 1.5;
+  margin: 1.5rem 0;
+  position: relative;
+  border: 1px solid #444;
+  font-size: 0.95rem;
+  /* Garantir que o código seja legível */
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.pagina-explicacao .codigo::before {
+  content: "HTML";
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--color-primary);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  font-size: 0.7rem;
+  border-radius: 0 var(--border-radius) 0 var(--border-radius);
+}
+
+/* Estilo para código CSS */
+.pagina-explicacao .codigo.css::before {
+  content: "CSS";
+  background-color: #264de4;
+}
+
+/* ===== EXEMPLOS ===== */
+.pagina-explicacao .exemplo {
+  background-color: rgba(255, 186, 8, 0.15);
+  color: var(--color-secondary);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  margin: 1.5rem 0;
+  border-left: 4px solid var(--color-accent);
+  /* Garantir que os exemplos sejam visíveis */
+  overflow: visible;
+}
+
+.pagina-explicacao .exemplo p {
+  margin: 0;
+  font-style: italic;
+}
+
+/* Estilo para elementos dentro dos exemplos */
+.pagina-explicacao .exemplo h1,
+.pagina-explicacao .exemplo h2,
+.pagina-explicacao .exemplo h3,
+.pagina-explicacao .exemplo h4,
+.pagina-explicacao .exemplo h5,
+.pagina-explicacao .exemplo h6,
+.pagina-explicacao .exemplo p {
+  margin: 0.5rem 0;
+}
+
+.pagina-explicacao .exemplo ul,
+.pagina-explicacao .exemplo ol {
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.pagina-explicacao .exemplo img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 0.5rem 0;
+}
+
+/* ===== BOTÕES DE NAVEGAÇÃO ===== */
+.navegacao-tags {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #eee;
+}
+
+.navegacao-tags a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  background-color: var(--color-primary);
+  color: white;
+  text-decoration: none;
+  border-radius: var(--border-radius);
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.navegacao-tags a:hover {
+  background-color: var(--color-secondary);
+  transform: translateY(-3px);
+}
+
+.navegacao-tags a.voltar {
+  background-color: var(--color-text-light);
+}
+
+.navegacao-tags a.voltar:hover {
+  background-color: #5a6268;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+  body.pagina-explicacao {
+      padding-top: 70px;
+  }
+  
+  .pagina-explicacao header h1 {
+      font-size: 1.5rem;
+  }
+  
+  .pagina-explicacao section {
+      padding: 1.2rem;
+  }
+  
+  .pagina-explicacao section h2 {
+      font-size: 1.3rem;
+  }
+  
+  .navegacao-tags {
+      flex-direction: column;
+      gap: 1rem;
+  }
+  
+  .navegacao-tags a {
+      justify-content: center;
+  }
+  
+  .pagina-explicacao .codigo {
+      padding: 1rem;
+      font-size: 0.85rem;
+  }
+}
+
+/* ===== ANIMAÇÕES ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.pagina-explicacao section {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.pagina-explicacao section:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.pagina-explicacao section:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.pagina-explicacao section:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.pagina-explicacao section:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.pagina-explicacao section:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+/* Estilo para código inline */
+.pagina-explicacao code {
+  background-color: #f4f4f4;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9em;
+  color: #d63384;
+}
+
+/* Melhorias para elementos específicos */
+.pagina-explicacao .exemplo .caixa {
+  padding: 10px;
+  border: 2px solid var(--color-primary);
+  background: #eee;
+  border-radius: 8px;
+  margin: 10px 0;
+}
