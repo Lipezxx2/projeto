@@ -16,91 +16,154 @@
 
   <main>
     <section>
-      <h2>color</h2>
-      <p>Define a cor do texto, como escolher a cobertura para sua sobremesa.</p>
+      <h2>@media (breakpoints)</h2>
+      <p>Define estilos que se adaptam ao tamanho da tela, como ajustar a louça ao tamanho da mesa.</p>
 
       <div class="exemplo">
-        <p style="color: red;">Texto em vermelho (como calda de morango)</p>
-        <p style="color: chocolate;">Texto em marrom (como calda de chocolate)</p>
+        <p style="color: red;">Ideal para **layouts responsivos** que funcionam bem em celular, tablet ou desktop.</p>
+        <p style="color: chocolate;">Layout que se adapta - como uma sobremesa servida no prato certo 🍽️</p>
       </div>
 
       <div class="codigo">
-        .sabor-morango { color: red; }<br>
-        .sabor-chocolate { color: chocolate; }
+          style
+    .caixa {
+      background-color: lightgray;
+      padding: 20px;
+      font-size: 16px;
+      text-align: center;
+    }
+
+    /* Tablet (>= 768px) */
+    @media (min-width: 768px) {
+      .caixa {
+        background-color: lightblue;
+        font-size: 18px;
+      }
+    }
+
+    /* Desktop (>= 1024px) */
+    @media (min-width: 1024px) {
+      .caixa {
+        background-color: lightgreen;
+        font-size: 20px;
+      }
+    }
+    /style
       </div>
     </section>
 
     <section>
-      <h2>background-color</h2>
-      <p>Define a cor de fundo, como o prato onde sua sobremesa é servida.</p>
+      <h2>container/larguras fluídas (max-width)</h2>
+      <p>Define a largura máxima de um elemento, permitindo que ele se ajuste ao tamanho da tela, mas sem ultrapassar um limite ideal, como o prato onde seu alimento é servido sem ultrapassar o limite ideal do prato.</p>
 
       <div class="exemplo">
         <div style="background-color: lightblue; padding: 15px; border-radius: 8px;">
-          <p>Fundo azul claro - como um prato elegante</p>
+          <p>width: 100%→ O recipientecresce ou diminui com a tela</p>
+          <p>max-width: 1200px → Mas nunca fica maior que 1200px, mesmo em telas grandes.</p>
+          <p>padding: 20px → Garante um espaço interno, evitando que o conteúdo encoste nas bordas.</p>
+          <p>margin: 0 auto → Centraliza horizontalmente o container na tela.</p>
         </div>
       </div>
 
       <div class="codigo">
-        .prato-sobremesa { <br>
-        &nbsp;&nbsp;background-color: lightblue;<br>
-        &nbsp;&nbsp;padding: 15px;<br>
-        &nbsp;&nbsp;border-radius: 8px;<br>
-        }
+            .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: lightgray;
+      border-radius: 8px;
+    }
       </div>
     </section>
 
     <section>
-      <h2>border</h2>
-      <p>Define a borda de um elemento, como a borda de uma torta ou bolo.</p>
+      <h2>imagens responsivas</h2>
+      <p>Assim como uma sobremesa que se adapta ao tamanho do prato, a imagem também deve se ajustar ao espaço disponível, sem perder a proporção.</p>
 
       <div class="exemplo">
-        <div style="border: 3px dashed green; padding: 15px; text-align: center;">
-          Borda verde tracejada - como a cobertura de uma torta
-        </div>
+        <p>A imagem se ajusta ao prato – sempre bonita em qualquer tamanho</p>
       </div>
 
       <div class="codigo">
-        .torta {<br>
-        &nbsp;&nbsp;border: 3px dashed green;<br>
-        &nbsp;&nbsp;padding: 15px;<br>
-        }
+         
+         .img-sobremesa {
+      max-width: 100%;   /* não ultrapassa o espaço disponível */
+      height: auto;      /* mantém a proporção */
+      border-radius: 8px;
+      }
+        
       </div>
     </section>
 
     <section>
-      <h2>font-size</h2>
-      <p>Define o tamanho da fonte, como o tamanho das porções de sobremesa.</p>
+      <h2>unidades %</h2>
+      <p>Define tamanhos proporcionais ao espaço disponível, como uma sobremesa que se ajusta ao tamanho do prato em que é servida.</p>
 
       <div class="exemplo">
-        <p style="font-size: 12px;">Pequena porção (12px)</p>
-        <p style="font-size: 18px;">Porção média (18px)</p>
-        <p style="font-size: 24px;">Porção grande (24px)</p>
+        <p> Largura em % - a sobremesa se adapta ao prato</p>
+      <div class="codigo">
+          .prato-sobremesa {
+      width: 80%;        /* ocupa 80% da largura do prato (container) */
+      padding: 10px;
+      background-color: lightgreen;
+      border-radius: 6px;
+  }
+    </section>
+    
+    <section>
+      <h2>rem</h2>
+      <p>Define tamanhos proporcionais à raiz do documento (geralmente o tamanho da fonte do elemento <html>), como uma sobremesa servida sempre na mesma medida da colher principal.</p>
+
+      <div class="exemplo">
+        <p>tamanho padrão da colher principal</p>
       </div>
 
       <div class="codigo">
-        .porção-pequena { font-size: 12px; }<br>
-        .porção-média { font-size: 18px; }<br>
-        .porção-grande { font-size: 24px; }
+        .prato-sobremesa {
+      font-size: 1.5rem;   /* 1.5 vezes o tamanho base definido no <html> */
+      padding: 1rem;       /* espaçamento proporcional ao tamanho raiz */
+      background-color: lightcoral;
+      border-radius: 0.5rem;
+  }
       </div>
     </section>
     
     <section>
-      <h2>border-radius</h2>
-      <p>Arredonda os cantos dos elementos, como arredondar uma bola de sorvete.</p>
+      <h2>vw/vh</h2>
+      <p>Definem tamanhos proporcionais à tela, É como uma sobremesa que sempre ocupa a mesma fração do prato, não importa o tamanho dele.</p>
 
       <div class="exemplo">
-        <div style="background-color: pink; padding: 20px; border-radius: 50%; width: 100px; height: 100px; display: flex; align-items: center; justify-content: center; margin: 0 auto;">
-          Bola de Sorvete
-        </div>
+        <p>a sobremesa cresce ou encolhe conforme o prato</p>
       </div>
 
       <div class="codigo">
-        .sorvete {<br>
-        &nbsp;&nbsp;background-color: pink;<br>
-        &nbsp;&nbsp;border-radius: 50%;<br>
-        &nbsp;&nbsp;width: 100px;<br>
-        &nbsp;&nbsp;height: 100px;<br>
-        }
+        .prato-sobremesa {
+      width: 60vw;        /* ocupa 60% da largura da tela */
+      height: 30vh;       /* ocupa 30% da altura da tela */
+      background-color: lightseagreen;
+      border-radius: 10px;
+  }
+      </div>
+    </section>
+
+    <section>
+      <h2>clamp()</h2>
+      <p>Define um valor que se ajusta automaticamente, respeitando um mínimo e um máximo. É como servir a sobremesa: nunca muito pequena, nunca exagerada — sempre no tamanho ideal.</p>
+
+      <div class="exemplo">
+        <p>Fonte que se adapta: mínima, ideal e máxima – a sobremesa sempre no ponto certo</p>
+      </div>
+
+      <div class="codigo">
+        .prato-sobremesa {
+      font-size: clamp(1rem, 2.5vw, 2rem);  
+      /* nunca menor que 1rem, cresce conforme a tela (2.5vw), mas nunca passa de 2rem */
+      
+      background-color: plum;
+      padding: 1rem;
+      border-radius: 8px;
+  }
       </div>
     </section>
     
