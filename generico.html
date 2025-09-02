@@ -16,78 +16,41 @@
 
   <main>
     <section>
-      <h2>&lt;h1&gt; até &lt;h6&gt;</h2>
-      <p>São títulos e subtítulos. O <code>&lt;h1&gt;</code> é o mais importante (como o prato principal), e o <code>&lt;h6&gt;</code> o menos importante (como um acompanhamento).</p>
+      <h2>&lt;div&gt;</h2>
+      <p>
+        A tag <strong>div</strong> é usada para criar <strong>blocos</strong> na página.  
+        Tudo que você colocar dentro de uma div fica em um “bloco separado”, ocupando toda a largura disponível.  
+        É útil para organizar o conteúdo, como caixas, seções ou partes do site.
+      </p>
       
       <div class="exemplo">
-        <h1>Título H1 (Prato Principal)</h1>
-        <h3>Título H3 (Acompanhamento)</h3>
-        <h6>Título H6 (Tempero)</h6>
+        <div style="background-color: #d0eaff; padding: 10px; margin-bottom: 5px;">Bloco 1</div>
+        <div style="background-color: #ffe0d0; padding: 10px;">Bloco 2</div>
       </div>
 
       <div class="codigo">
-        &lt;h1&gt;Título H1&lt;/h1&gt;<br>
-        &lt;h3&gt;Título H3&lt;/h3&gt;<br>
-        &lt;h6&gt;Título H6&lt;/h6&gt;
+        &lt;div&gt;Bloco 1&lt;/div&gt;<br>
+        &lt;div&gt;Bloco 2&lt;/div&gt;
       </div>
     </section>
 
     <section>
-      <h2>&lt;p&gt;</h2>
-      <p>Cria parágrafos de texto, como a descrição de um prato no cardápio.</p>
+      <h2>&lt;span&gt;</h2>
+      <p>
+        A tag <strong>span</strong> é usada para destacar ou estilizar apenas **uma parte do texto**.  
+        Diferente do div, ela não cria um bloco; fica na mesma linha do restante do texto.
+      </p>
 
       <div class="exemplo">
-        <p>Este é um parágrafo de exemplo, como uma descrição detalhada do prato no cardápio.</p>
+        <p>Este é um exemplo de um parágrafo com <span style="color:red; font-weight:bold;">texto destacado</span> usando span.</p>
       </div>
 
       <div class="codigo">
-        &lt;p&gt;Este é um parágrafo de exemplo&lt;/p&gt;
+        &lt;span style="color:red; font-weight:bold;"&gt;texto destacado&lt;/span&gt;
+
       </div>
     </section>
 
-    <section>
-      <h2>&lt;img&gt;</h2>
-      <p>Insere imagens na página, como uma foto apetitosa do prato.</p>
-
-      <div class="exemplo">
-        <img src="https://picsum.photos/200" alt="Imagem exemplo de um prato" style="border-radius: 8px;">
-        <p><em>Imagem de um prato delicioso</em></p>
-      </div>
-
-      <div class="codigo">
-        &lt;img src="prato.jpg" alt="Imagem do prato"&gt;
-      </div>
-    </section>
-
-    <section>
-      <h2>&lt;ul&gt; / &lt;ol&gt; / &lt;li&gt;</h2>
-      <p>Criam listas, perfeitas para menus ou ingredientes.</p>
-
-      <div class="exemplo">
-        <h4>Menu do Dia (lista não ordenada):</h4>
-        <ul>
-          <li>Pizza Margherita</li>
-          <li>Hambúrguer Artesanal</li>
-          <li>Salada Caesar</li>
-        </ul>
-        
-        <h4>Passos para preparo (lista ordenada):</h4>
-        <ol>
-          <li>Preaqueça o forno</li>
-          <li>Prepare os ingredientes</li>
-          <li>Monte o prato</li>
-        </ol>
-      </div>
-
-      <div class="codigo">
-        &lt;ul&gt;<br>
-        &nbsp;&nbsp;&lt;li&gt;Pizza Margherita&lt;/li&gt;<br>
-        &nbsp;&nbsp;&lt;li&gt;Hambúrguer Artesanal&lt;/li&gt;<br>
-        &nbsp;&nbsp;&lt;li&gt;Salada Caesar&lt;/li&gt;<br>
-        &lt;/ul&gt;
-      </div>
-    </section>
-    
     <div class="navegacao-tags">
       <a href="entrada.html" class="voltar"><i class="fas fa-arrow-left"></i> Tags de Entrada</a>
       <a href="sobremesa.html">Tags de Sobremesa <i class="fas fa-arrow-right"></i></a>
