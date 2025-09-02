@@ -1,127 +1,135 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>🍝 Prato Principal - Explicação</title>
-  <link rel="stylesheet" href="src/styles/styles.css">
-  <link rel="stylesheet" href="src/styles/resultado.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-</head>
-<body class="pagina-explicacao">
-  <header>
-    <h1><i class="fas fa-utensils"></i> Prato Principal</h1>
-    <a href="index.html"><i class="fas fa-arrow-left"></i> Voltar ao Cardápio</a>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🍝 Prato Principal - Explicação</title>
+    <link rel="stylesheet" href="src/styles/styles.css" />
+    <link rel="stylesheet" href="src/styles/resultado.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body class="pagina-explicacao">
+    <header>
+      <h1><i class="fas fa-utensils"></i> Prato Principal</h1>
+      <a href="index.html"
+        ><i class="fas fa-arrow-left"></i> Voltar ao Cardápio</a
+      >
+    </header>
 
+    <main>
+      <section>
+        <h2>&lt;table&gt;</h2>
+        <p>
+          A tag <strong>table</strong> é usada para criar tabelas. Ela serve
+          como “container” para linhas e células de dados.
+        </p>
 
-  <main>
-    <section>
-      <h2>&lt;table&gt;</h2>
-      <p>
-        A tag <strong>table</strong> é usada para criar tabelas.  
-        Ela serve como “container” para linhas e células de dados.
-      </p>
+        <div class="exemplo">
+          <table border="1" cellpadding="5">
+            <tr>
+              <th>Nome</th>
+              <th>Idade</th>
+            </tr>
+            <tr>
+              <td>Enzo</td>
+              <td>20</td>
+            </tr>
+            <tr>
+              <td>Ana</td>
+              <td>22</td>
+            </tr>
+          </table>
+        </div>
 
-      <div class="exemplo">
-        <table border="1" cellpadding="5">
-          <tr>
-            <th>Nome</th>
-            <th>Idade</th>
-          </tr>
-          <tr>
-            <td>Enzo</td>
-            <td>20</td>
-          </tr>
-          <tr>
-            <td>Ana</td>
-            <td>22</td>
-          </tr>
-        </table>
+        <div class="codigo">
+          &lt;table border="1" cellpadding="5"&gt;<br />
+          &nbsp;&nbsp;&lt;tr&gt;<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Nome&lt;/th&gt;<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Idade&lt;/th&gt;<br />
+          &nbsp;&nbsp;&lt;/tr&gt;<br />
+          &nbsp;&nbsp;&lt;tr&gt;<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Enzo&lt;/td&gt;<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;20&lt;/td&gt;<br />
+          &nbsp;&nbsp;&lt;/tr&gt;<br />
+          &nbsp;&nbsp;&lt;tr&gt;<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Ana&lt;/td&gt;<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;22&lt;/td&gt;<br />
+          &nbsp;&nbsp;&lt;/tr&gt;<br />
+          &lt;/table&gt;
+        </div>
+      </section>
+
+      <section>
+        <h2>&lt;tr&gt; e &lt;td&gt;</h2>
+        <p>
+          Cada linha da tabela é criada com a tag <strong>tr</strong>. Dentro
+          dela, cada célula de dados é criada com a tag <strong>td</strong>.
+        </p>
+
+        <div class="exemplo">
+          <table border="1" cellpadding="5">
+            <tr>
+              <td>Maçã</td>
+              <td>R$ 3,00</td>
+            </tr>
+            <tr>
+              <td>Banana</td>
+              <td>R$ 2,50</td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="codigo">
+          &lt;tr&gt;<br />
+          &nbsp;&nbsp;&lt;td&gt;Maçã&lt;/td&gt;<br />
+          &nbsp;&nbsp;&lt;td&gt;R$ 3,00&lt;/td&gt;<br />
+          &lt;/tr&gt;<br />
+          &lt;tr&gt;<br />
+          &nbsp;&nbsp;&lt;td&gt;Banana&lt;/td&gt;<br />
+          &nbsp;&nbsp;&lt;td&gt;R$ 2,50&lt;/td&gt;<br />
+          &lt;/tr&gt;
+        </div>
+      </section>
+
+      <section>
+        <h2>&lt;th&gt;</h2>
+        <p>
+          A tag <strong>th</strong> é usada para criar células de cabeçalho.
+          Normalmente aparecem em negrito e centralizadas.
+        </p>
+
+        <div class="exemplo">
+          <table border="1" cellpadding="5">
+            <tr>
+              <th>Produto</th>
+              <th>Preço</th>
+            </tr>
+            <tr>
+              <td>Leite</td>
+              <td>R$ 4,00</td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="codigo">
+          &lt;tr&gt;<br />
+          &nbsp;&nbsp;&lt;th&gt;Produto&lt;/th&gt;<br />
+          &nbsp;&nbsp;&lt;th&gt;Preço&lt;/th&gt;<br />
+          &lt;/tr&gt;
+        </div>
+      </section>
+
+      <div class="navegacao-tags">
+        <a href="prato.html" class="voltar"
+          ><i class="fas fa-arrow-left"></i> Prato Principal</a
+        >
+        <a href="sobremesa.html"
+          >Tags de Sobremesa <i class="fas fa-arrow-right"></i
+        ></a>
       </div>
-
-      <div class="codigo">
-        &lt;table border="1" cellpadding="5"&gt;<br>
-        &nbsp;&nbsp;&lt;tr&gt;<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Nome&lt;/th&gt;<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Idade&lt;/th&gt;<br>
-        &nbsp;&nbsp;&lt;/tr&gt;<br>
-        &nbsp;&nbsp;&lt;tr&gt;<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Enzo&lt;/td&gt;<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;20&lt;/td&gt;<br>
-        &nbsp;&nbsp;&lt;/tr&gt;<br>
-        &nbsp;&nbsp;&lt;tr&gt;<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Ana&lt;/td&gt;<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;22&lt;/td&gt;<br>
-        &nbsp;&nbsp;&lt;/tr&gt;<br>
-        &lt;/table&gt;
-      </div>
-    </section>
-
-    <section>
-      <h2>&lt;tr&gt; e &lt;td&gt;</h2>
-      <p>
-        Cada linha da tabela é criada com a tag <strong>tr</strong>.  
-        Dentro dela, cada célula de dados é criada com a tag <strong>td</strong>.
-      </p>
-
-      <div class="exemplo">
-        <table border="1" cellpadding="5">
-          <tr>
-            <td>Maçã</td>
-            <td>R$ 3,00</td>
-          </tr>
-          <tr>
-            <td>Banana</td>
-            <td>R$ 2,50</td>
-          </tr>
-        </table>
-      </div>
-
-      <div class="codigo">
-        &lt;tr&gt;<br>
-        &nbsp;&nbsp;&lt;td&gt;Maçã&lt;/td&gt;<br>
-        &nbsp;&nbsp;&lt;td&gt;R$ 3,00&lt;/td&gt;<br>
-        &lt;/tr&gt;<br>
-        &lt;tr&gt;<br>
-        &nbsp;&nbsp;&lt;td&gt;Banana&lt;/td&gt;<br>
-        &nbsp;&nbsp;&lt;td&gt;R$ 2,50&lt;/td&gt;<br>
-        &lt;/tr&gt;
-      </div>
-    </section>
-
-    <section>
-      <h2>&lt;th&gt;</h2>
-      <p>
-        A tag <strong>th</strong> é usada para criar células de cabeçalho.  
-        Normalmente aparecem em negrito e centralizadas.
-      </p>
-
-      <div class="exemplo">
-        <table border="1" cellpadding="5">
-          <tr>
-            <th>Produto</th>
-            <th>Preço</th>
-          </tr>
-          <tr>
-            <td>Leite</td>
-            <td>R$ 4,00</td>
-          </tr>
-        </table>
-      </div>
-
-      <div class="codigo">
-        &lt;tr&gt;<br>
-        &nbsp;&nbsp;&lt;th&gt;Produto&lt;/th&gt;<br>
-        &nbsp;&nbsp;&lt;th&gt;Preço&lt;/th&gt;<br>
-        &lt;/tr&gt;
-      </div>
-    </section>
-
-    <div class="navegacao-tags">
-      <a href="prato.html" class="voltar"><i class="fas fa-arrow-left"></i> Prato Principal</a>
-      <a href="sobremesa.html">Tags de Sobremesa <i class="fas fa-arrow-right"></i></a>
-    </div>
-  </main>
-</body>
+    </main>
+  </body>
 </html>
