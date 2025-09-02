@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
   <link rel="stylesheet" href="src/styles/resultado.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body class="pagina-explicacao">
   <header>
     <h1><i class="fas fa-utensils"></i> Prato Principal</h1>
@@ -16,82 +18,133 @@
 
   <main>
     <section>
-      <h2>&lt;h1&gt; até &lt;h6&gt;</h2>
-      <p>São títulos e subtítulos. O <code>&lt;h1&gt;</code> é o mais importante (como o prato principal), e o <code>&lt;h6&gt;</code> o menos importante (como um acompanhamento).</p>
-      
+      <h2>&lt;form&gt;</h2>
+      <p> A tag <strong>form</form></strong> cria um formulario, que permite enviar dados dos usuario para um servidor
+        ou script.
+        Ela e o container de todos os campos e botoes</p>
+
       <div class="exemplo">
-        <h1>Título H1 (Prato Principal)</h1>
-        <h3>Título H3 (Acompanhamento)</h3>
-        <h6>Título H6 (Tempero)</h6>
+        <form action="processa.php" method="post">
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome" placeholder="digite seu nome">
+          <button type="submit">Enviar</button>
+        </form>
       </div>
 
       <div class="codigo">
-        &lt;h1&gt;Título H1&lt;/h1&gt;<br>
-        &lt;h3&gt;Título H3&lt;/h3&gt;<br>
-        &lt;h6&gt;Título H6&lt;/h6&gt;
+        &lt;form action="processa.php" method="post"&gt;<br>
+        &nbsp;&nbsp;&lt;label for="nome"&gt;Nome:&lt;/label&gt;<br>
+        &nbsp;&nbsp;&lt;input type="text" id="nome" name="nome" placeholder="Digite seu nome"&gt;<br>
+        &nbsp;&nbsp;&lt;button type="submit"&gt;Enviar&lt;/button&gt;<br>
+        &lt;/form&gt;
       </div>
     </section>
 
     <section>
-      <h2>&lt;p&gt;</h2>
-      <p>Cria parágrafos de texto, como a descrição de um prato no cardápio.</p>
+      <h2>&lt;input&gt;</h2>
+      <p>A tag <strong>input</strong> cria campos de entrada de dados, como texto, email, senhas, numero, checkbox,
+        entre outros</p>
 
       <div class="exemplo">
-        <p>Este é um parágrafo de exemplo, como uma descrição detalhada do prato no cardápio.</p>
+        <form>
+          <input type="text" placeholder="Texto">
+          <input type="email" placeholder="Email">
+          <input type="password" placeholder="Senha" </form>
       </div>
 
       <div class="codigo">
-        &lt;p&gt;Este é um parágrafo de exemplo&lt;/p&gt;
+        &lt;input type="text" placeholder="Texto"&gt;<br>
+        &lt;input type="email" placeholder="Email"&gt;<br>
+        &lt;input type="password" placeholder="Senha"&gt;
       </div>
     </section>
 
     <section>
-      <h2>&lt;img&gt;</h2>
-      <p>Insere imagens na página, como uma foto apetitosa do prato.</p>
+      <h2>&lt;textarea&gt;</h2>
+      <p>
+        A tag <strong>textarea</strong> cria um campo de texto maior, para várias linhas.
+      </p>
 
       <div class="exemplo">
-        <img src="https://picsum.photos/200" alt="Imagem exemplo de um prato" style="border-radius: 8px;">
-        <p><em>Imagem de um prato delicioso</em></p>
+        <textarea rows="4" cols="50" placeholder="Digite sua mensagem"></textarea>
       </div>
 
       <div class="codigo">
-        &lt;img src="prato.jpg" alt="Imagem do prato"&gt;
+        &lt;textarea rows="4" cols="50" placeholder="Digite sua mensagem"&gt;&lt;/textarea&gt;
       </div>
     </section>
 
     <section>
-      <h2>&lt;ul&gt; / &lt;ol&gt; / &lt;li&gt;</h2>
-      <p>Criam listas, perfeitas para menus ou ingredientes.</p>
+      <h2>&lt;select&gt; e &lt;option&gt;</h2>
+      <p>
+        Criam listas suspensas de opções, onde o usuário pode selecionar apenas uma delas.
+      </p>
 
       <div class="exemplo">
-        <h4>Menu do Dia (lista não ordenada):</h4>
-        <ul>
-          <li>Pizza Margherita</li>
-          <li>Hambúrguer Artesanal</li>
-          <li>Salada Caesar</li>
-        </ul>
-        
-        <h4>Passos para preparo (lista ordenada):</h4>
-        <ol>
-          <li>Preaqueça o forno</li>
-          <li>Prepare os ingredientes</li>
-          <li>Monte o prato</li>
-        </ol>
+        <select>
+          <option value="frontend">Front-end</option>
+          <option value="backend">Back-end</option>
+          <option value="fullstack">Fullstack</option>
+        </select>
       </div>
 
       <div class="codigo">
-        &lt;ul&gt;<br>
-        &nbsp;&nbsp;&lt;li&gt;Pizza Margherita&lt;/li&gt;<br>
-        &nbsp;&nbsp;&lt;li&gt;Hambúrguer Artesanal&lt;/li&gt;<br>
-        &nbsp;&nbsp;&lt;li&gt;Salada Caesar&lt;/li&gt;<br>
-        &lt;/ul&gt;
+        &lt;select&gt;<br>
+        &nbsp;&nbsp;&lt;option value="frontend"&gt;Front-end&lt;/option&gt;<br>
+        &nbsp;&nbsp;&lt;option value="backend"&gt;Back-end&lt;/option&gt;<br>
+        &nbsp;&nbsp;&lt;option value="fullstack"&gt;Fullstack&lt;/option&gt;<br>
+        &lt;/select&gt;
       </div>
     </section>
-    
+
+    <section>
+      <h2>&lt;button&gt; e &lt;label&gt;</h2>
+      <p>
+        A tag <strong>button</strong> cria botões (submit, reset ou comum).
+        A tag <strong>label</strong> cria um texto explicativo ligado a um campo, melhorando a acessibilidade.
+      </p>
+
+      <div class="exemplo">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <button type="submit">Enviar</button>
+      </div>
+
+      <div class="codigo">
+        &lt;label for="email"&gt;Email:&lt;/label&gt;<br>
+        &lt;input type="email" id="email" name="email"&gt;<br>
+        &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+      </div>
+    </section>
+
+    <section>
+      <h2>&lt;fieldset&gt; e &lt;legend&gt;</h2>
+      <p>
+        Agrupam campos relacionados dentro do formulário, com um título definido pelo <strong>legend</strong>.
+      </p>
+
+      <div class="exemplo">
+        <fieldset>
+          <legend>Informações Pessoais</legend>
+          <input type="text" placeholder="Nome">
+          <input type="email" placeholder="Email">
+        </fieldset>
+      </div>
+
+      <div class="codigo">
+        &lt;fieldset&gt;<br>
+        &nbsp;&nbsp;&lt;legend&gt;Informações Pessoais&lt;/legend&gt;<br>
+        &nbsp;&nbsp;&lt;input type="text" placeholder="Nome"&gt;<br>
+        &nbsp;&nbsp;&lt;input type="email" placeholder="Email"&gt;<br>
+        &lt;/fieldset&gt;
+      </div>
+    </section>
+
     <div class="navegacao-tags">
       <a href="entrada.html" class="voltar"><i class="fas fa-arrow-left"></i> Tags de Entrada</a>
       <a href="sobremesa.html">Tags de Sobremesa <i class="fas fa-arrow-right"></i></a>
     </div>
   </main>
 </body>
+
 </html>
