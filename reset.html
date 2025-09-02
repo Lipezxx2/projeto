@@ -16,8 +16,8 @@
 
   <main>
     <section>
-      <h2>color</h2>
-      <p>Define a cor do texto, como escolher a cobertura para sua sobremesa.</p>
+      <h2>*</h2>
+      <p>Reset Global da página</p>
 
       <div class="exemplo">
         <p style="color: red;">Texto em vermelho (como calda de morango)</p>
@@ -25,13 +25,15 @@
       </div>
 
       <div class="codigo">
-        .sabor-morango { color: red; }<br>
-        .sabor-chocolate { color: chocolate; }
+        * { margin: 0;
+            padding: 0; 
+            
+          }<br>
       </div>
     </section>
 
     <section>
-      <h2>background-color</h2>
+      <h2>box-sizing</h2>
       <p>Define a cor de fundo, como o prato onde sua sobremesa é servida.</p>
 
       <div class="exemplo">
@@ -50,26 +52,25 @@
     </section>
 
     <section>
-      <h2>border</h2>
-      <p>Define a borda de um elemento, como a borda de uma torta ou bolo.</p>
+      <h2>body</h2>
+      <p>Define todo o conteúdo do seu body</p>
 
       <div class="exemplo">
-        <div style="border: 3px dashed green; padding: 15px; text-align: center;">
-          Borda verde tracejada - como a cobertura de uma torta
+        <div style="background-color: rgb(255, 151, 14); padding: 15px; text-align: center;">
+          como o fundo dele. Como uma cobertura de laranja
         </div>
       </div>
 
       <div class="codigo">
-        .torta {<br>
-        &nbsp;&nbsp;border: 3px dashed green;<br>
-        &nbsp;&nbsp;padding: 15px;<br>
+        body {<br>
+        &nbsp;&nbsp;background-color: orange;<br>
         }
       </div>
     </section>
 
     <section>
-      <h2>font-size</h2>
-      <p>Define o tamanho da fonte, como o tamanho das porções de sobremesa.</p>
+      <h2>:root</h2>
+      <p>Declara variáveis CSS global.</p>
 
       <div class="exemplo">
         <p style="font-size: 12px;">Pequena porção (12px)</p>
@@ -78,36 +79,9 @@
       </div>
 
       <div class="codigo">
-        .porção-pequena { font-size: 12px; }<br>
-        .porção-média { font-size: 18px; }<br>
-        .porção-grande { font-size: 24px; }
+        :root { font-size: 12px; }<br>
       </div>
     </section>
-    
-    <section>
-      <h2>border-radius</h2>
-      <p>Arredonda os cantos dos elementos, como arredondar uma bola de sorvete.</p>
-
-      <div class="exemplo">
-        <div style="background-color: pink; padding: 20px; border-radius: 50%; width: 100px; height: 100px; display: flex; align-items: center; justify-content: center; margin: 0 auto;">
-          Bola de Sorvete
-        </div>
-      </div>
-
-      <div class="codigo">
-        .sorvete {<br>
-        &nbsp;&nbsp;background-color: pink;<br>
-        &nbsp;&nbsp;border-radius: 50%;<br>
-        &nbsp;&nbsp;width: 100px;<br>
-        &nbsp;&nbsp;height: 100px;<br>
-        }
-      </div>
-    </section>
-    
-    <div class="navegacao-tags">
-      <a href="Semantica.html" class="voltar"><i class="fas fa-arrow-left"></i> Tags HTML</a>
-      <a href="#">Mais Propriedades CSS <i class="fas fa-arrow-right"></i></a>
-    </div>
   </main>
 </body>
 </html>
