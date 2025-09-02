@@ -14,82 +14,112 @@
     <a href="index.html"><i class="fas fa-arrow-left"></i> Voltar ao Cardápio</a>
   </header>
 
+
   <main>
     <section>
-      <h2>&lt;h1&gt; até &lt;h6&gt;</h2>
-      <p>São títulos e subtítulos. O <code>&lt;h1&gt;</code> é o mais importante (como o prato principal), e o <code>&lt;h6&gt;</code> o menos importante (como um acompanhamento).</p>
-      
+      <h2>&lt;table&gt;</h2>
+      <p>
+        A tag <strong>table</strong> é usada para criar tabelas.  
+        Ela serve como “container” para linhas e células de dados.
+      </p>
+
       <div class="exemplo">
-        <h1>Título H1 (Prato Principal)</h1>
-        <h3>Título H3 (Acompanhamento)</h3>
-        <h6>Título H6 (Tempero)</h6>
+        <table border="1" cellpadding="5">
+          <tr>
+            <th>Nome</th>
+            <th>Idade</th>
+          </tr>
+          <tr>
+            <td>Enzo</td>
+            <td>20</td>
+          </tr>
+          <tr>
+            <td>Ana</td>
+            <td>22</td>
+          </tr>
+        </table>
       </div>
 
       <div class="codigo">
-        &lt;h1&gt;Título H1&lt;/h1&gt;<br>
-        &lt;h3&gt;Título H3&lt;/h3&gt;<br>
-        &lt;h6&gt;Título H6&lt;/h6&gt;
+        &lt;table border="1" cellpadding="5"&gt;<br>
+        &nbsp;&nbsp;&lt;tr&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Nome&lt;/th&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Idade&lt;/th&gt;<br>
+        &nbsp;&nbsp;&lt;/tr&gt;<br>
+        &nbsp;&nbsp;&lt;tr&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Enzo&lt;/td&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;20&lt;/td&gt;<br>
+        &nbsp;&nbsp;&lt;/tr&gt;<br>
+        &nbsp;&nbsp;&lt;tr&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Ana&lt;/td&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;22&lt;/td&gt;<br>
+        &nbsp;&nbsp;&lt;/tr&gt;<br>
+        &lt;/table&gt;
       </div>
     </section>
 
     <section>
-      <h2>&lt;p&gt;</h2>
-      <p>Cria parágrafos de texto, como a descrição de um prato no cardápio.</p>
+      <h2>&lt;tr&gt; e &lt;td&gt;</h2>
+      <p>
+        Cada linha da tabela é criada com a tag <strong>tr</strong>.  
+        Dentro dela, cada célula de dados é criada com a tag <strong>td</strong>.
+      </p>
 
       <div class="exemplo">
-        <p>Este é um parágrafo de exemplo, como uma descrição detalhada do prato no cardápio.</p>
+        <table border="1" cellpadding="5">
+          <tr>
+            <td>Maçã</td>
+            <td>R$ 3,00</td>
+          </tr>
+          <tr>
+            <td>Banana</td>
+            <td>R$ 2,50</td>
+          </tr>
+        </table>
       </div>
 
       <div class="codigo">
-        &lt;p&gt;Este é um parágrafo de exemplo&lt;/p&gt;
+        &lt;tr&gt;<br>
+        &nbsp;&nbsp;&lt;td&gt;Maçã&lt;/td&gt;<br>
+        &nbsp;&nbsp;&lt;td&gt;R$ 3,00&lt;/td&gt;<br>
+        &lt;/tr&gt;<br>
+        &lt;tr&gt;<br>
+        &nbsp;&nbsp;&lt;td&gt;Banana&lt;/td&gt;<br>
+        &nbsp;&nbsp;&lt;td&gt;R$ 2,50&lt;/td&gt;<br>
+        &lt;/tr&gt;
       </div>
     </section>
 
     <section>
-      <h2>&lt;img&gt;</h2>
-      <p>Insere imagens na página, como uma foto apetitosa do prato.</p>
+      <h2>&lt;th&gt;</h2>
+      <p>
+        A tag <strong>th</strong> é usada para criar células de cabeçalho.  
+        Normalmente aparecem em negrito e centralizadas.
+      </p>
 
       <div class="exemplo">
-        <img src="https://picsum.photos/200" alt="Imagem exemplo de um prato" style="border-radius: 8px;">
-        <p><em>Imagem de um prato delicioso</em></p>
+        <table border="1" cellpadding="5">
+          <tr>
+            <th>Produto</th>
+            <th>Preço</th>
+          </tr>
+          <tr>
+            <td>Leite</td>
+            <td>R$ 4,00</td>
+          </tr>
+        </table>
       </div>
 
       <div class="codigo">
-        &lt;img src="prato.jpg" alt="Imagem do prato"&gt;
+        &lt;tr&gt;<br>
+        &nbsp;&nbsp;&lt;th&gt;Produto&lt;/th&gt;<br>
+        &nbsp;&nbsp;&lt;th&gt;Preço&lt;/th&gt;<br>
+        &lt;/tr&gt;
       </div>
     </section>
 
-    <section>
-      <h2>&lt;ul&gt; / &lt;ol&gt; / &lt;li&gt;</h2>
-      <p>Criam listas, perfeitas para menus ou ingredientes.</p>
-
-      <div class="exemplo">
-        <h4>Menu do Dia (lista não ordenada):</h4>
-        <ul>
-          <li>Pizza Margherita</li>
-          <li>Hambúrguer Artesanal</li>
-          <li>Salada Caesar</li>
-        </ul>
-        
-        <h4>Passos para preparo (lista ordenada):</h4>
-        <ol>
-          <li>Preaqueça o forno</li>
-          <li>Prepare os ingredientes</li>
-          <li>Monte o prato</li>
-        </ol>
-      </div>
-
-      <div class="codigo">
-        &lt;ul&gt;<br>
-        &nbsp;&nbsp;&lt;li&gt;Pizza Margherita&lt;/li&gt;<br>
-        &nbsp;&nbsp;&lt;li&gt;Hambúrguer Artesanal&lt;/li&gt;<br>
-        &nbsp;&nbsp;&lt;li&gt;Salada Caesar&lt;/li&gt;<br>
-        &lt;/ul&gt;
-      </div>
-    </section>
-    
     <div class="navegacao-tags">
-      <a href="entrada.html" class="voltar"><i class="fas fa-arrow-left"></i> Tags de Entrada</a>
+      <a href="prato.html" class="voltar"><i class="fas fa-arrow-left"></i> Prato Principal</a>
       <a href="sobremesa.html">Tags de Sobremesa <i class="fas fa-arrow-right"></i></a>
     </div>
   </main>
