@@ -10,58 +10,33 @@
 </head>
 <body class="pagina-explicacao">
   <header>
-    <h1><i class="fas fa-ice-cream"></i> Posicionamento e Camadas - CSS</h1>
+    <h1><i class="fas fa-ice-cream"></i> Sobremesas - CSS</h1>
     <a href="index.html"><i class="fas fa-arrow-left"></i> Voltar ao Cardápio</a>
   </header>
 
   <main>
     <section>
       <h2>color</h2>
-      <p>Define como a sobremesa é colocada no prato (ou na mesa). Cada valor de position controla um jeito diferente dela ficar no espaço.</p>
+      <p>Define a cor do texto, como escolher a cobertura para sua sobremesa.</p>
 
-      <div class="exemplo">
-        <p>Static, relative, absolute, fixed, sticky – cada sobremesa encontra seu lugar na mesa</p>
+      <div class="exemplo css">
+        <p style="color: red;">Texto em vermelho (como calda de morango)</p>
+        <p style="color: chocolate;">Texto em marrom (como calda de chocolate)</p>
       </div>
 
       <div class="codigo">
-        .prato-sobremesa {
-    position: static;
-}
-
-.prato-sobremesa {
-    position: relative; 
-    top: 10px;
-    left: 20px;
-}
-
-.prato-sobremesa {
-    position: absolute;
-    top: 50px;
-    right: 10px;
-}
-
-.prato-sobremesa {
-    position: fixed;   
-    bottom: 0;
-    left: 0;
-}
-
-.prato-sobremesa {
-    position: sticky;  
-    top: 0;
-}
-
+        .sabor-morango { color: red; }<br>
+        .sabor-chocolate { color: chocolate; }
       </div>
     </section>
 
     <section>
-      <h2>top/right/bottom/left, z-index.</h2>
-      <p>São os talheres que ajustam a posição da sobremesa no prato.
-Com eles, você pode mover a sobremesa para qualquer canto — e o z-index define quem fica por cima ou por baixo na mesa.</p>
+      <h2>background-color</h2>
+      <p>Define a cor de fundo, como o prato onde sua sobremesa é servida.</p>
 
       <div class="exemplo">
         <div style="background-color: lightblue; padding: 15px; border-radius: 8px;">
-          <p>Controle de posição e camadas – a sobremesa sempre no lugar certo e com prioridade</p>
+          <p>Fundo azul claro - como um prato elegante</p>
         </div>
       </div>
 
