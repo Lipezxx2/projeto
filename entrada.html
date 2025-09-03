@@ -1,69 +1,90 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>🍽️ Entrada - Explicação</title>
-  <link rel="stylesheet" href="src/styles/styles.css">
-  <link rel="stylesheet" href="src/styles/resultado.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-</head>
-<body class="pagina-explicacao">
-  <header>
-    <h1><i class="fas fa-leaf"></i> Entrada</h1>
-    <a href="index.html"><i class="fas fa-arrow-left"></i> Voltar ao Cardápio</a>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🍽️ Entrada - Explicação</title>
+    <link rel="stylesheet" href="src/styles/styles.css" />
+    <link rel="stylesheet" href="src/styles/resultado.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body class="pagina-explicacao">
+    <header>
+      <h1><i class="fas fa-leaf"></i> Entrada</h1>
+      <a href="index.html"
+        ><i class="fas fa-arrow-left"></i> Voltar ao Cardápio</a
+      >
+    </header>
 
-  <main>
-    <section>
-      <h2>&lt;!DOCTYPE html&gt;</h2>
-      <p>Define que o documento é um HTML5. É a primeira declaração que deve aparecer em qualquer documento HTML.</p>
+    <main>
+      <section>
+        <h2>&lt;!DOCTYPE html&gt;</h2>
+        <p>
+          Define que o documento é um HTML5. É a primeira declaração que deve
+          aparecer em qualquer documento HTML.
+        </p>
 
-      <div class="codigo">
-        &lt;!DOCTYPE html&gt;
+        <div class="codigo">&lt;!DOCTYPE html&gt;</div>
+      </section>
+
+      <section>
+        <h2>&lt;html lang="pt-BR"&gt;</h2>
+        <p>
+          Indica o início do HTML e define o idioma da página. O atributo lang
+          ajuda os leitores de tela e motores de busca.
+        </p>
+
+        <div class="codigo">
+          &lt;html lang="pt-BR"&gt;<br />
+          &lt;!-- Todo o conteúdo HTML vem aqui --&gt;<br />
+          &lt;/html&gt;
+        </div>
+      </section>
+
+      <section>
+        <h2>&lt;head&gt;</h2>
+        <p>
+          Guarda informações sobre a página (título, charset, links de CSS/JS).
+          Estes metadados não são visíveis na página, mas são essenciais para o
+          navegador.
+        </p>
+
+        <div class="codigo">
+          &lt;head&gt;<br />
+          &nbsp;&nbsp;&lt;meta charset="UTF-8"&gt;<br />
+          &nbsp;&nbsp;&lt;title&gt;Minha Página&lt;/title&gt;<br />
+          &lt;/head&gt;
+        </div>
+      </section>
+
+      <section>
+        <h2>&lt;title&gt;</h2>
+        <p>
+          Define o nome que aparece na aba do navegador. É também o título usado
+          quando a página é favoritada.
+        </p>
+
+        <div class="exemplo">
+          <p>
+            <i class="fas fa-info-circle"></i> Olhe no topo da aba do navegador
+            → "Entrada - Explicação"
+          </p>
+        </div>
+
+        <div class="codigo">
+          &lt;title&gt;Entrada - Explicação&lt;/title&gt;
+        </div>
+      </section>
+
+      <div class="navegacao-tags">
+        <a href="index.html" class="voltar"
+          ><i class="fas fa-arrow-left"></i> Voltar ao Cardápio</a
+        >
+        <a href="prato.html">Próxima Tag <i class="fas fa-arrow-right"></i></a>
       </div>
-    </section>
-
-    <section>
-      <h2>&lt;html lang="pt-BR"&gt;</h2>
-      <p>Indica o início do HTML e define o idioma da página. O atributo lang ajuda os leitores de tela e motores de busca.</p>
-
-      <div class="codigo">
-        &lt;html lang="pt-BR"&gt;<br>
-        &lt;!-- Todo o conteúdo HTML vem aqui --&gt;<br>
-        &lt;/html&gt;
-      </div>
-    </section>
-
-    <section>
-      <h2>&lt;head&gt;</h2>
-      <p>Guarda informações sobre a página (título, charset, links de CSS/JS). Estes metadados não são visíveis na página, mas são essenciais para o navegador.</p>
-
-      <div class="codigo">
-        &lt;head&gt;<br>
-        &nbsp;&nbsp;&lt;meta charset="UTF-8"&gt;<br>
-        &nbsp;&nbsp;&lt;title&gt;Minha Página&lt;/title&gt;<br>
-        &lt;/head&gt;
-      </div>
-    </section>
-
-    <section>
-      <h2>&lt;title&gt;</h2>
-      <p>Define o nome que aparece na aba do navegador. É também o título usado quando a página é favoritada.</p>
-
-      <div class="exemplo">
-        <p><i class="fas fa-info-circle"></i> Olhe no topo da aba do navegador → "Entrada - Explicação"</p>
-      </div>
-
-      <div class="codigo">
-        &lt;title&gt;Entrada - Explicação&lt;/title&gt;
-      </div>
-    </section>
-    
-    <div class="navegacao-tags">
-      <a href="index.html" class="voltar"><i class="fas fa-arrow-left"></i> Voltar ao Cardápio</a>
-      <a href="prato.html">Próxima Tag <i class="fas fa-arrow-right"></i></a>
-    </div>
-  </main>
-</body>
+    </main>
+  </body>
 </html>

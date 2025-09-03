@@ -10,7 +10,7 @@
 </head>
 <body class="pagina-explicacao">
   <header>
-    <h1><i class="fas fa-ice-cream"></i> Sobremesas - CSS</h1>
+    <h1><i class="fas fa-ice-cream"></i> Reset e Base Global - CSS</h1>
     <a href="index.html"><i class="fas fa-arrow-left"></i> Voltar ao Cardápio</a>
   </header>
 
@@ -34,7 +34,7 @@
 
     <section>
       <h2>box-sizing</h2>
-      <p>Define a cor de fundo, como o prato onde sua sobremesa é servida.</p>
+      <p>É utilizada para alterar a propriedade padrão da box model. Usada para calcular larguras e alturas dos elementos.</p>
 
       <div class="exemplo">
         <div style="background-color: lightblue; padding: 15px; border-radius: 8px;">
@@ -64,7 +64,6 @@
       <div class="codigo">
         body {<br>
         &nbsp;&nbsp;background-color: orange;<br>
-        &nbsp;&nbsp;<br>
         }
       </div>
     </section>
@@ -74,13 +73,22 @@
       <p>Declara variáveis CSS global.</p>
 
       <div class="exemplo">
-        <p style="font-size: 12px;">Pequena porção (12px)</p>
-        <p style="font-size: 18px;">Porção média (18px)</p>
-        <p style="font-size: 24px;">Porção grande (24px)</p>
+        <p style="font-size: 18px; color: var(--color-primary);">Foi usado a variavel color primary</p>
+        <p style="font-size: 18px; color: var(--color-secondary);">Foi usado a variavel color secondary</p>
       </div>
 
       <div class="codigo">
-        :root { font-size: 12px; }<br>
+        :root {
+  --color-primary: #e85d04;
+  --color-primary-light: #ff9e66;
+  --color-secondary: #370617;
+  --color-accent: #ffba08;
+  --color-bg: #f8f9fa;
+  --color-text: #212529;
+  --color-text-light: #6c757d;
+  --color-card-bg: #ffffff;
+  --color-footer: #212529;
+        }<br>
       </div>
     </section>
   </main>
