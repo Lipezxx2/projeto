@@ -42,7 +42,8 @@
       ou até círculos perfeitos. Suaviza o design e torna mais moderno.</p>
       <div class="exemplo">
         <div style="background-color: orange; border-radius: 10px;">Exemplo 1 com 15px</div><br>
-        <div style="background-color: orange; border-radius: 50%; height: 100px; width: 100px;"></div>
+        <div style="background-color: orange; border-radius: 50%; height: 100px; width: 100px; text-align: center; padding: 20px;">Exemplo 2</div>
+        <p>Border-radius 50% cria elementos  completamente redondos. O witdh tem que estar com a mesma unidade e número do height</p>
       </div>
       <div class="codigo css">
         .exemplo1 {
@@ -66,8 +67,8 @@
         <p style="outline: solid black;">Outline solid</p>
       </div>
       <div class="codigo css">
-        .exemplo1 {
-          
+        .exemplo {
+          outline: solid black;
         }
       </div>
     </section>
@@ -76,8 +77,20 @@
       <h2>outline-offset</h2>
       <p> Define a distância entre o elemento e seu outline. Cria um espaço transparente 
       entre a borda do elemento e a linha do outline.</p>
-      <div class="exemplo"> exemplo</div>
-      <div class="codigo css"> código</div>
+      <div class="exemplo">
+        <p style="outline-offset: 10px; outline: auto; border: 2px solid black;">outline-offset com 10px e borda 2px solid</p><br>
+        <p style="outline-offset: 20px; outline: auto;">outline-offset com 20px</p>
+      </div>
+      <div class="codigo css">
+        exemplo1 {
+          outline: auto;
+          outline-offset: 10px;
+        } <br>
+        exemplo2 {
+          outline: auto;
+          outline-offset: 20px;
+        }
+      </div>
     </section>
 
     <div class="navegacao-tags">
