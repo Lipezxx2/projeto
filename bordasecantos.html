@@ -18,32 +18,79 @@
       <h2>Border (largura/estilo/cor)</h2>
       <p>Define bordas ao redor dos elementos. Combina largura, 
       estilo e cor da borda. Fundamental para delimitar áreas visuais.</p>
-      <div class="exemplo"> exemplo</div>
-      <div class="codigo css"> código</div>
+      <div class="exemplo">
+        <div style="border: 2px solid black;">Borda com largura de 2px estilo solid e cor preta</div><br>
+        <div style="border: 2px dashed;">Borda com largura de 2px estilo dashed e cor preta</div> <br>
+        <div style="border: 2px dotted;">Borda com largura de 2px estilo dotted e cor preta</div>
+      </div>
+      <div class="codigo css">
+        borda1 {
+          border: 2px solid black;
+        } <br>
+        borda2 {
+          border: 2px dashed black;
+        } <br>
+        borda3 {
+          border: 2px dotted black;
+        }
+      </div>
     </section>
 
     <section>
       <h2>border-radius</h2>
       <p> Arredonda os cantos dos elementos. Transforma quadrados em retângulos arredondados 
       ou até círculos perfeitos. Suaviza o design e torna mais moderno.</p>
-      <div class="exemplo"> exemplo</div>
-      <div class="codigo css"> código</div>
+      <div class="exemplo">
+        <div style="background-color: orange; border-radius: 10px;">Exemplo 1 com 15px</div><br>
+        <div style="background-color: orange; border-radius: 50%; height: 100px; width: 100px; text-align: center; padding: 20px;">Exemplo 2</div>
+        <p>Border-radius 50% cria elementos  completamente redondos. O witdh tem que estar com a mesma unidade e número do height</p>
+      </div>
+      <div class="codigo css">
+        .exemplo1 {
+          background-color: orange;
+          border-radius: 15px;
+        } <br>
+        .exemplo2 {
+          background-color: orange;
+          border-radius: 50%;
+          width: 100px;
+          height: 100px;
+        } <br>
+      </div>
     </section>
 
     <section>
       <h2>Outline</h2>
       <p>Cria uma linha ao redor do elemento, MAS diferente da border: não ocupa espaço 
       no layout e fica "por cima". Muito usado para indicar foco em elementos.</p>
-      <div class="exemplo"> exemplo</div>
-      <div class="codigo css"> código</div>
+      <div class="exemplo">
+        <p style="outline: solid black;">Outline solid</p>
+      </div>
+      <div class="codigo css">
+        .exemplo {
+          outline: solid black;
+        }
+      </div>
     </section>
 
     <section>
       <h2>outline-offset</h2>
       <p> Define a distância entre o elemento e seu outline. Cria um espaço transparente 
       entre a borda do elemento e a linha do outline.</p>
-      <div class="exemplo"> exemplo</div>
-      <div class="codigo css"> código</div>
+      <div class="exemplo">
+        <p style="outline-offset: 10px; outline: auto; border: 2px solid black;">outline-offset com 10px e borda 2px solid</p><br>
+        <p style="outline-offset: 20px; outline: auto;">outline-offset com 20px</p>
+      </div>
+      <div class="codigo css">
+        exemplo1 {
+          outline: auto;
+          outline-offset: 10px;
+        } <br>
+        exemplo2 {
+          outline: auto;
+          outline-offset: 20px;
+        }
+      </div>
     </section>
 
     <div class="navegacao-tags">
