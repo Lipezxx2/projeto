@@ -18,67 +18,157 @@
       <h2>Font-family</h2>
       <p> Define o tipo da fonte que será usada. Você pode usar fontes padrão do sistema 
       ou importar fontes personalizadas do Google Fonts ou outros serviços.</p>
-      <div class="exemplo"> exemplo</div>
-      <div class="codigo css"> código</div>
+      <div class="exemplo">
+        <p>Texto sem Fonte</p>
+        <p style="font-family: Arial, sans-serif;">Texto com a fonte Arial</p>
+        <p style="font-family: 'Times New Roman', Times, serif;">Texto com a fonte Times New Roman</p>
+      </div>
+      <div class="codigo css">
+        body {
+          font-family: Arial, sans-serif;
+        } <br>
+        body {
+          font-family: 'Times New Roman', Times, serif;
+        }
+      </div>
     </section>
 
     <section>
       <h2>Font-size</h2>
       <p> Controla o tamanho da fonte. Pode ser definido em pixels (px), rem ou outras unidades.</p>
-      <div class="exemplo"> exemplo</div>
-      <div class="codigo css"> código</div>
+      <div class="exemplo">
+        <p style="font-size: 12px;">Font-size(12px)</p>
+        <p style="font-size: 24px;">Font-size(24px)</p>
+      </div>
+      <div class="codigo css">
+        texto1 {
+          font-size: 12px;
+        } <br>
+        texto2 {
+          font-size: 24px;
+        }
+      </div>
     </section>
 
     <section>
       <h2>Font-weight</h2>
       <p>Controla a espessura/peso da fonte. Vai de 100 (mais fino) até 900 (mais grosso). 
       Também aceita palavras como normal, bold.</p>
-      <div class="exemplo"> exemplo</div>
-      <div class="codigo css"> código</div>
+      <div class="exemplo">
+        <p style="font-weight: 100;">Texto com espressura 100</p>
+        <p style="font-weight: 900;">Texto com espressura 900</p>
+      </div>
+      <div class="codigo css">
+        p1 {
+          font-weight: 100;
+        } <br>
+        p2 {
+          font-weight: 900;
+        }
+      </div>
     </section>
 
     <section>
       <h2>Line-height</h2>
       <p> Define a altura da linha, ou seja, o espaço vertical entre linhas de texto.</p>
-      <div class="exemplo"> exemplo</div>
-      <div class="codigo css"> código</div>
+      <div class="exemplo">
+        <p style="line-height: 50px;">texto com Line-height de 50px</p>
+        <p style="line-height: 100px;">texto com Line-height de 100px</p>
+      </div>
+      <div class="codigo css">
+        p1 {
+          line-height: 50px;
+        } <br>
+        p2 {
+          line-height: 100px;
+        }
+      </div>
     </section>
 
     <section>
       <h2>Letter-spacing</h2>
       <p> Controla o espaço entre as letras individuais. Valores positivos afastam letras, 
       negativos aproximam. Útil para ajustar legibilidade e estilo.</p>
-      <div class="exemplo"> exemplo</div>
-      <div class="codigo css"> código</div>
+      <div class="exemplo">
+        <p style="letter-spacing: 10px;">Exemplo com letter-spacing de 10px</p> <br>
+        <p style="letter-spacing: 20px;">Exemplo com letter-spacing de 20px</p>
+
+      </div>
+      <div class="codigo css">
+        texto1 {
+          letter-spacing: 10px;
+        } <br>
+        texto2 {
+          letter-spacing: 20px;
+        }
+      </div>
     </section>
 
     <section>
       <h2>Text-align</h2>
       <p>Define o alinhamento horizontal do texto dentro do elemento. 
       Controla se o texto fica à esquerda, centro, direita ou justificado.</p>
-      <div class="exemplo"> exemplo</div>
-      <div class="codigo css"> código</div>
+      <div class="exemplo">
+        <p style="text-align: center;">Texto com text-alight center</p><br>
+        <p style="text-align: left;">Texto com text-alight left (esquerda)</p><br>
+        <p style="text-align: right;">Texto com text-alight right (direita)</p>
+      </div>
+      <div class="codigo css">
+        p1 {
+          text-alight: center;
+        } <br>
+        p2 {
+          text-alight: left;
+        } <br>
+        p3 {
+          text-alight: righT;
+        }
+      </div>
     </section>
 
     <section>
       <h2>Text-transform</h2>
       <p>Transforma automaticamente o texto sem alterar o HTML. 
       Pode converter para maiúsculas, minúsculas ou capitalizar palavras.</p>
-      <div class="exemplo"> exemplo</div>
-      <div class="codigo css"> código</div>
+      <div class="exemplo">
+        <p style="text-transform: uppercase;">Texto com uppercase (maiúsculas)</p><br>
+        <p style="text-transform: lowercase;">Texto com lowercase (minúsculas)</p>
+      </div>
+      <div class="codigo css">
+        texto1 {
+          text-transform: uppercase;
+        } <br>
+        texto2 {
+          text-transform: lowercase;
+        }
+      </div>
     </section>
 
     <section>
       <h2>Text-decoration</h2>
       <p>Adiciona decorações visuais ao texto como sublinhado, linha cortada ou remove 
       decorações padrão (como sublinhado de links).</p>
-      <div class="exemplo"> exemplo</div>
-      <div class="codigo css"> código</div>
+      <div class="exemplo">
+        <p style="text-decoration: underline;">Texto com underline (sublinhado)</p> <br>
+        <p style="text-decoration: line-through;">Texto com line-through(linha cortada)</p><br>
+        <p style="text-decoration: overline;">Texto com overline (linha em cima)</p> 
+      </div>
+      <div class="codigo css">
+        texto1 {
+          text-decoration: underline;
+        } <br>
+        texto2 {
+          text-decoration: line-through;
+        } <br>
+        texto1 {
+          text-decoration: overline;
+        } <br>
+      </div>
     </section>
-    
-    <div class="navegacao-tags">
-      <a href="coresfundos.html"> Tags CSS</a>
-      <a href="espacamento.html"> Mais Propriedades CS</a>
+
+       <div class="navegacao-tags">
+      <a href="coresfundos.html" class="voltar"><i class="fas fa-arrow-left"></i> Tags CSS</a>
+      <a href="espacamento.html">Mais Propriedades CSS <i class="fas fa-arrow-right"></i></a>
     </div>
   </main>
 </body>
