@@ -1,101 +1,59 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>🍰 Bordas e Cantos - CSS</title>
-    <link rel="stylesheet" href="src/styles/styles.css" />
-    <link rel="stylesheet" href="src/styles/resultado.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    />
-  </head>
-  <body class="pagina-explicacao">
-    <header>
-      <h1><i class="fas fa-ice-cream"></i> Bordas e Cantos</h1>
-      <a href="index.html"
-        ><i class="fas fa-arrow-left"></i> Voltar ao Cardápio</a
-      >
-    </header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🍰 Sobremesa - CSS</title>
+  <link rel="stylesheet" href="src/styles/styles.css">
+  <link rel="stylesheet" href="src/styles/resultado.css">
+</head>
+<body class="pagina-explicacao">
+  <header>
+    <h1> Bordas e Cantos - CSS</h1>
+    <a href="index.html"> Voltar ao Cardápio</a>
+  </header>
 
-    <main>
-      <section>
-        <h2>Border (borda)</h2>
-        <p>
-          Define a borda ao redor de um elemento. É composta por 3 valores: largura, estilo e cor. 
-        </p>
+  <main>
+    <section>
+      <h2>Border (largura/estilo/cor)</h2>
+      <p>Define bordas ao redor dos elementos. Combina largura, 
+      estilo e cor da borda. Fundamental para delimitar áreas visuais.</p>
+      <div class="exemplo"> exemplo</div>
+      <div class="codigo css"> código</div>
+    </section>
 
-        <div class="exemplo">
-          <div style="display: flex; gap: 15px;">
-            <div style="border: 2px solid var(--color-primary); padding: 15px; text-align: center;"> 
-              <small>border : 2px solid</small><br>
-              Borda sólida
-          </div>
-          <div style="border: 4px dotted var(--color-primary); padding: 15px; text-align: center;">
-            <small>border: 4px dotted</small><br>
-            Borda pontilhada
+    <section>
+      <h2>border-radius</h2>
+      <p> Arredonda os cantos dos elementos. Transforma quadrados em retângulos arredondados 
+      ou até círculos perfeitos. Suaviza o design e torna mais moderno.</p>
+      <div class="exemplo"> exemplo</div>
+      <div class="codigo css"> código</div>
+    </section>
 
-          </div>
-        </div>
+    <section>
+      <h2>Outline</h2>
+      <p>Cria uma linha ao redor do elemento, MAS diferente da border: não ocupa espaço 
+      no layout e fica "por cima". Muito usado para indicar foco em elementos.</p>
+      <div class="exemplo"> exemplo</div>
+      <div class="codigo css"> código</div>
+    </section>
 
-        <div class="codigo css">
-          .bordasolida { border: 2px solid orange; (largura, estilo, cor) }<br />
-          .bordapontilhada { color: 4px dotted orange; }
+    <section>
+      <h2>outline-offset</h2>
+      <p> Define a distância entre o elemento e seu outline. Cria um espaço transparente 
+      entre a borda do elemento e a linha do outline.</p>
+      <div class="exemplo"> exemplo</div>
+      <div class="codigo css"> código</div>
+    </section>
 
-          Estilos disponíveis: solid, dashed, dotted, groove, ridge, inset, tset
-        </div>
-      </section>
-
-      
-      <section>
-        <h2>border-radius</h2>
-        <p>
-          Arredonda os cantos dos elementos, como arredondar uma bola de
-          sorvete. Quanto maior o valor, mais arredondado fica
-        </p>
-
-        <div class="exemplo">
-          <div style="display: flex; gap: 15px; flex-wrap: wrap; align-items: flex-end;">
-          <div style="border: 2px solid var(--color-primary); border-radius: 5px; padding: 15px; text-align: center;">
-            <small>border-radius: 5px</small><br>
-            Cantos leves
-          </div>
-          <div style="border: 2px solid var(--color-primary); border-radius: 15px; padding: 15px; text-align: center;">
-            <small>border-radius: 15px</small><br>
-            Cantos arredondados
-          </div>
-          <div style="border: 2px solid var(--color-primary); border-radius: 50%; width: 70px; text-align: center; height: 70px; display: flex; justify-content: center;">
-            <small>border-radius: 50%</small><br>
-            Circulo
-          </div>
-          </div>
-
-        <div class="codigo css">
-          .bordaleve { <br>
-            border: 2px solid orange;<br>
-            border-radius: 5px;
-          }
-
-          .bordaleve { <br>
-            border: 2px solid orange;<br>
-            border-radius: 15px;
-          }
-          .circulo {<br />
-          &nbsp;&nbsp;background-color: pink;<br />
-          &nbsp;&nbsp;border-radius: 50%;<br />
-          &nbsp;&nbsp;width: 100px;<br />
-          &nbsp;&nbsp;height: 100px;<br />
-          }
-        </div>
-      </section>
-
-      <div class="navegacao-tags">
+    <div class="navegacao-tags">
         <a href="espacamento.html" class="voltar"
           ><i class="fas fa-arrow-left"></i> Tags CSS</a
         >
-        <a href="tamanhos.html">Mais Propriedades CSS <i class="fas fa-arrow-right"></i></a>
-      </div>
-    </main>
-  </body>
+        <a href="tamanhos.html"
+          > Mais Propriedades CSS <i class="fas fa-arrow-right"></i
+        ></a>
+
+  </main>
+</body>
 </html>

@@ -6,96 +6,45 @@
   <title>🍰 Sobremesa - CSS</title>
   <link rel="stylesheet" href="src/styles/styles.css">
   <link rel="stylesheet" href="src/styles/resultado.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body class="pagina-explicacao">
   <header>
-    <h1><i class="fas fa-ice-cream"></i> Reset e Base Global - CSS</h1>
-    <a href="index.html"><i class="fas fa-arrow-left"></i> Voltar ao Cardápio</a>
+    <h1> Reset e Base Global - CSS</h1>
+    <a href="index.html"> Voltar ao Cardápio</a>
   </header>
 
   <main>
     <section>
       <h2>*</h2>
-      <p>Reset Global da página</p>
-
-      <div class="exemplo">
-        <p style="color: red;">Texto em vermelho (como calda de morango)</p>
-        <p style="color: chocolate;">Texto em marrom (como calda de chocolate)</p>
-      </div>
-
-      <div class="codigo css">
-        * { margin: 0;
-            padding: 0; 
-            
-          }<br>
-      </div>
+      <p>Aplica estilos a TODOS os elementos da página. É usado principalmente para reset, 
+      removendo espaçamentos padrão do navegador e definindo box-sizing. Reset é SEMPRE o primeiro CSS que você escreve</p>
+      <div class="exemplo"> exemplo</div>
+      <div class="codigo css"> código</div>
     </section>
 
     <section>
-      <h2>box-sizing</h2>
-      <p>É utilizada para alterar a propriedade padrão da box model. Usada para calcular larguras e alturas dos elementos.</p>
-
-      <div class="exemplo">
-        <div style="background-color: lightblue; padding: 15px; border-radius: 8px;">
-          <p>Fundo azul claro - como um prato elegante</p>
-        </div>
-      </div>
-
-      <div class="codigo css">
-        .prato-sobremesa { <br>
-        &nbsp;&nbsp;background-color: lightblue;<br>
-        &nbsp;&nbsp;padding: 15px;<br>
-        &nbsp;&nbsp;border-radius: 8px;<br>
-        }
-      </div>
+      <h2>Body</h2>
+      <p>Define estilos base para toda a página visível. Controla fonte padrão, 
+      cores de fundo, altura mínima e outras configurações globais do site.</p>
+      <div class="exemplo"> exemplo</div>
+      <div class="codigo css"> código</div>
     </section>
 
     <section>
-      <h2>body</h2>
-      <p>Define todo o conteúdo do seu body</p>
-
-      <div class="exemplo">
-        <div style="background-color: rgb(255, 151, 14); padding: 15px; text-align: center;">
-          como o fundo dele. Como uma cobertura de laranja
-        </div>
-      </div>
-
-      <div class="codigo css">
-        body {<br>
-        &nbsp;&nbsp;background-color: orange;<br>
-        }
-      </div>
+      <h2>Root</h2>
+      <p>Define variáveis CSS globais que podem ser reutilizadas em qualquer lugar do site. 
+      É como criar "apelidos" para valores que você usa frequentemente.</p>
+      <div class="exemplo"> exemplo</div>
+      <div class="codigo css"> código</div>
     </section>
 
-    <section>
-      <h2>:root</h2>
-      <p>Declara variáveis CSS global.</p>
-
-      <div class="exemplo">
-        <p style="font-size: 18px; color: var(--color-primary);">Foi usado a variavel color primary</p>
-        <p style="font-size: 18px; color: var(--color-secondary);">Foi usado a variavel color secondary</p>
-      </div>
-
-      <div class="codigo css">
-        :root {
-  --color-primary: #e85d04;
-  --color-primary-light: #ff9e66;
-  --color-secondary: #370617;
-  --color-accent: #ffba08;
-  --color-bg: #f8f9fa;
-  --color-text: #212529;
-  --color-text-light: #6c757d;
-  --color-card-bg: #ffffff;
-  --color-footer: #212529;
-        }<br>
-      </div>
-    </section>
-
-        
     <div class="navegacao-tags">
-      <a href="Semantica.html" class="voltar"><i class="fas fa-arrow-left"></i> Tags HTML</a>
-      <a href="coresfundos.html">Mais Propriedades CSS <i class="fas fa-arrow-right"></i></a>
+        <a href="Semantica.html" class="voltar"
+          ><i class="fas fa-arrow-left"></i> Tags HTML</a
+        >
+        <a href="coresfundos.html"
+          > Mais Propriedades CSS <i class="fas fa-arrow-right"></i
+        ></a>
     </div>
   </main>
 </body>
