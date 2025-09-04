@@ -18,7 +18,18 @@
       <h2>*</h2>
       <p>Aplica estilos a TODOS os elementos da página. É usado principalmente para reset, 
       removendo espaçamentos padrão do navegador e definindo box-sizing. Reset é SEMPRE o primeiro CSS que você escreve</p>
-      <div class="exemplo"> exemplo</div>
+      <div class="exemplo">
+        <p><i class="fas fa-info-circle"></i> Sem reset, cada elemento tem espaçamentos diferentes pelo navegador</p>
+        <div style="border: 1px solid #ccc; padding: 10px; margin: 10px 0;">
+          <h3 style="margin: 16px 0; padding: 0;">Título com margin padrão</h3>
+          <p style="margin: 16px; padding: 0;">Parágrafo com margin padrão</p>
+        </div>
+        <p><i class="fas fas-check-circle"></i>Com reset, todos elementos ficam zerados e consistentes</p>
+        <div style="border: 1px solid #ccc; padding: 10px; margin: 10px 0;">
+          <h3 style="margin: 0; padding: 0;">Título sem margin</h3>
+          <p style="margin: 0; padding: 0;">Parágrafo sem margin</p>
+        </div>
+      </div>
       <div class="codigo css">
         * {
           margin: 0;
@@ -32,16 +43,41 @@
       <h2>Body</h2>
       <p>Define estilos base para toda a página visível. Controla fonte padrão, 
       cores de fundo, altura mínima e outras configurações globais do site.</p>
-      <div class="exemplo"> exemplo</div>
-      <div class="codigo css"> código</div>
+      <div class="exemplo">
+        <p><i class="fas fa-info-circle"></i> O body é como o "papel" onde você vai escrever sua página:</p>
+        <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; margin-bottom: 10px;">
+        <strong style="color: #e85d04;"> Fundo da página</strong><br>
+        <small>background-color define a cor de toda a página</small>
+        </div>
+      </div>
+      <div class="codigo css">
+        body {
+          background-color: white;
+          color: orange;
+        }
+      </div>
     </section>
 
     <section>
       <h2>Root</h2>
       <p>Define variáveis CSS globais que podem ser reutilizadas em qualquer lugar do site. 
       É como criar "apelidos" para valores que você usa frequentemente.</p>
-      <div class="exemplo"> exemplo</div>
-      <div class="codigo css"> código</div>
+      <div class="exemplo">
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;">
+          <div style="background-color: var(--color-primaria, #e85d04); color: white; padding: 10px; text-align: center; border-radius: 5px;">
+            --color-primary
+          </div>
+          <div style="background-color: var(--color-primaria, rgb(0, 255, 64)); color: white; padding: 10px; text-align: center; border-radius: 5px;">
+            --color-secondary
+          </div>
+        </div>
+      </div>
+      <div class="codigo css">
+        :root {
+          --color-primaria: yellow;
+          --color-btn: orange;
+        }
+      </div>
     </section>
 
     <div class="navegacao-tags">
