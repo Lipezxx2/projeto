@@ -6,6 +6,10 @@
   <title>🍰 Sobremesa - CSS</title>
   <link rel="stylesheet" href="src/styles/styles.css">
   <link rel="stylesheet" href="src/styles/resultado.css">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
 </head>
 <body class="pagina-explicacao">
   <header>
@@ -16,49 +20,170 @@
   <main>
     <section>
       <h2>Margin</h2>
-      <p>Cria espaço externo ao redor do elemento.</p>
-      <div class="exemplo"> exemplo</div>
-      <div class="codigo css"> código</div>
+      <p>Cria espaço externo ao redor do elemento. É como uma "bolha invisível" que empurra outros elementos para longe.</p>
+      
+      <div class="exemplo">
+        <p><i class="fas fa-arrows-alt"></i> Margin cria espaço FORA do elemento:</p>
+        
+        <div style="background: #f0f0f0; padding: 20px; border-radius: 8px;">
+          <div style="background: #e85d04; color: white; padding: 15px; margin: 20px; border-radius: 5px; text-align: center;">
+            <strong>Elemento com margin: 20px</strong><br>
+            <small>Veja o espaço ao redor (cinza)</small>
+          </div>
+          <div style="background: #f48c06; color: white; padding: 15px; margin: 5px; border-radius: 5px; text-align: center;">
+            <strong>Elemento com margin: 5px</strong><br>
+            <small>Menos espaço ao redor</small>
+          </div>
+        </div>
+        
+        <p style="color: #666; font-style: italic;"><i class="fas fa-lightbulb"></i> Margin empurra elementos vizinhos para longe</p>
+      </div>
+      
+      <div class="codigo css">
+.elemento {
+  margin: 20px; /* Todos os lados */
+  margin-top: 10px; /* Apenas topo */
+  margin: 10px 20px; /* Vertical | Horizontal */
+  margin: 5px 10px 15px 20px; /* Topo | Direita | Baixo | Esquerda */
+}
+      </div>
     </section>
 
     <section>
       <h2>Padding</h2>
-      <p>Cria espaço interno dentro do elemento, entre o conteúdo e a borda.</p>
-      <div class="exemplo"> exemplo</div>
-      <div class="codigo css"> código</div>
+      <p>Cria espaço interno dentro do elemento, entre o conteúdo e a borda. É como um "estofado" interno.</p>
+      
+      <div class="exemplo">
+        <p><i class="fas fa-compress-alt"></i> Padding cria espaço DENTRO do elemento:</p>
+        
+        <div style="display: flex; gap: 20px; margin: 15px 0;">
+          <div style="background: #e85d04; color: white; padding: 5px; border-radius: 5px; flex: 1;">
+            <div style="background: rgba(255,255,255,0.2); border-radius: 3px; text-align: center; padding: 5px;">
+              <strong>padding: 5px</strong><br>
+              <small>Pouco espaço interno</small>
+            </div>
+          </div>
+          <div style="background: #e85d04; color: white; padding: 25px; border-radius: 5px; flex: 1;">
+            <div style="background: rgba(255,255,255,0.2); border-radius: 3px; text-align: center; padding: 5px;">
+              <strong>padding: 25px</strong><br>
+              <small>Muito espaço interno</small>
+            </div>
+          </div>
+        </div>
+        
+        <p style="color: #666; font-style: italic;"><i class="fas fa-info-circle"></i> Padding aumenta o tamanho total do elemento</p>
+      </div>
+      
+      <div class="codigo css">
+.elemento {
+  padding: 15px; /* Todos os lados */
+  padding-left: 20px; /* Apenas esquerda */
+  padding: 10px 20px; /* Vertical | Horizontal */
+  padding: 5px 10px 15px 20px; /* Topo | Direita | Baixo | Esquerda */
+}
+      </div>
     </section>
 
     <section>
       <h2>Gap</h2>
-      <p>Definição</p>
-      <div class="exemplo"> exemplo</div>
-      <div class="codigo css"> código</div>
+      <p>Define espaçamento entre elementos filhos em layouts Flexbox e Grid. É mais simples que usar margin.</p>
+      
+      <div class="exemplo">
+        <p><i class="fas fa-th-large"></i> Gap cria espaço entre elementos filhos:</p>
+        
+        <div style="background: #f0f0f0; padding: 15px; border-radius: 8px; margin: 15px 0;">
+          <p><strong>Com gap: 10px</strong></p>
+          <div style="display: flex; gap: 10px;">
+            <div style="background: #e85d04; color: white; padding: 10px; border-radius: 5px; flex: 1; text-align: center;">Item 1</div>
+            <div style="background: #f48c06; color: white; padding: 10px; border-radius: 5px; flex: 1; text-align: center;">Item 2</div>
+            <div style="background: #ffba08; color: #333; padding: 10px; border-radius: 5px; flex: 1; text-align: center;">Item 3</div>
+          </div>
+        </div>
+        
+        <div style="background: #f0f0f0; padding: 15px; border-radius: 8px;">
+          <p><strong>Com gap: 25px</strong></p>
+          <div style="display: flex; gap: 25px;">
+            <div style="background: #e85d04; color: white; padding: 10px; border-radius: 5px; flex: 1; text-align: center;">Item 1</div>
+            <div style="background: #f48c06; color: white; padding: 10px; border-radius: 5px; flex: 1; text-align: center;">Item 2</div>
+            <div style="background: #ffba08; color: #333; padding: 10px; border-radius: 5px; flex: 1; text-align: center;">Item 3</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="codigo css">
+.container {
+  display: flex; /* ou display: grid */
+  gap: 20px; /* Espaço entre todos os filhos */
+}
+      </div>
     </section>
 
     <section>
       <h2>Row-gap</h2>
-      <p> Define espaçamento específico entre as linhas (rows) em layouts grid. 
-      Controla apenas o espaço vertical entre elementos.</p>
-      <div class="exemplo"> exemplo</div>
-      <div class="codigo css"> código</div>
+      <p>Define espaçamento específico entre as linhas (rows) em layouts grid. Controla apenas o espaço vertical entre elementos.</p>
+      
+      <div class="exemplo">
+        <p><i class="fas fa-arrows-alt-v"></i> Row-gap controla apenas o espaço VERTICAL:</p>
+        
+        <div style="background: #f0f0f0; padding: 15px; border-radius: 8px; margin: 15px 0;">
+          <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; row-gap: 20px; column-gap: 10px;">
+            <div style="background: #e85d04; color: white; padding: 10px; border-radius: 5px; text-align: center;">Item 1</div>
+            <div style="background: #f48c06; color: white; padding: 10px; border-radius: 5px; text-align: center;">Item 2</div>
+            <div style="background: #ffba08; color: #333; padding: 10px; border-radius: 5px; text-align: center;">Item 3</div>
+            <div style="background: #e85d04; color: white; padding: 10px; border-radius: 5px; text-align: center;">Item 4</div>
+            <div style="background: #f48c06; color: white; padding: 10px; border-radius: 5px; text-align: center;">Item 5</div>
+            <div style="background: #ffba08; color: #333; padding: 10px; border-radius: 5px; text-align: center;">Item 6</div>
+          </div>
+          <p style="margin: 10px 0 0 0; font-size: 0.9em; color: #666;"><i class="fas fa-info-circle"></i> row-gap: 20px (espaço maior entre linhas)</p>
+        </div>
+      </div>
+      
+      <div class="codigo css">
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 20px; /* Espaço apenas entre linhas */
+}
+      </div>
     </section>
 
     <section>
       <h2>Column-gap</h2>
-      <p> Define espaçamento específico entre as colunas em layouts grid. 
-      Controla apenas o espaço horizontal entre elementos.</p>
-      <div class="exemplo"> exemplo</div>
-      <div class="codigo css"> código</div>
+      <p>Define espaçamento específico entre as colunas em layouts grid. Controla apenas o espaço horizontal entre elementos.</p>
+      
+      <div class="exemplo">
+        <p><i class="fas fa-arrows-alt-h"></i> Column-gap controla apenas o espaço HORIZONTAL:</p>
+        
+        <div style="background: #f0f0f0; padding: 15px; border-radius: 8px; margin: 15px 0;">
+          <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; row-gap: 5px; column-gap: 30px;">
+            <div style="background: #e85d04; color: white; padding: 10px; border-radius: 5px; text-align: center;">Item 1</div>
+            <div style="background: #f48c06; color: white; padding: 10px; border-radius: 5px; text-align: center;">Item 2</div>
+            <div style="background: #ffba08; color: #333; padding: 10px; border-radius: 5px; text-align: center;">Item 3</div>
+            <div style="background: #e85d04; color: white; padding: 10px; border-radius: 5px; text-align: center;">Item 4</div>
+            <div style="background: #f48c06; color: white; padding: 10px; border-radius: 5px; text-align: center;">Item 5</div>
+            <div style="background: #ffba08; color: #333; padding: 10px; border-radius: 5px; text-align: center;">Item 6</div>
+          </div>
+          <p style="margin: 10px 0 0 0; font-size: 0.9em; color: #666;"><i class="fas fa-info-circle"></i> column-gap: 30px (espaço maior entre colunas)</p>
+        </div>
+      </div>
+      
+      <div class="codigo css">
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 30px; /* Espaço apenas entre colunas */
+}
+      </div>
     </section>
 
     <div class="navegacao-tags">
         <a href="font.html" class="voltar"
-          ><i class="fas fa-arrow-left"></i> Tags CSS</a
+          ><i class="fas fa-arrow-left"></i> Textos CSS</a
         >
         <a href="bordasecantos.html"
-          > Mais Propriedades CSS <i class="fas fa-arrow-right"></i
+          > Bordas e Cantos <i class="fas fa-arrow-right"></i
         ></a>
-
+    </div>
   </main>
 </body>
 </html>
