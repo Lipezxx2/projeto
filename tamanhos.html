@@ -1,229 +1,116 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>🍰 Sobremesa - CSS</title>
+  <title>🍽️ Tamanhos e Box Model</title>
   <link rel="stylesheet" href="src/styles/styles.css">
   <link rel="stylesheet" href="src/styles/resultado.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-
 <body class="pagina-explicacao">
   <header>
-    <h1><i class="fas fa-ice-cream"></i>Tamanhos e Box Model - CSS</h1>
+    <h1><i class="fas fa-ruler"></i> Tamanhos e Box Model</h1>
     <a href="index.html"><i class="fas fa-arrow-left"></i> Voltar ao Cardápio</a>
   </header>
 
   <main>
     <section>
-      <h2>color</h2>
-      <p>Define a largura de um elemento.</p>
-
-      <h2 style="color: orange;">Width</h2>
-      <p>Define a largura do elemento, como se fosse a <b>largura do prato</b> onde a comida é servida.</p>
-
-      <div style="background: #fff8e6; padding: 15px; border-left: 4px solid orange; border-radius: 10px;">
-        <div style="width: 300px;">
-          Define a largura de um elemento.
+      <h2>width & height</h2>
+      <p>Controlam a largura e altura de um elemento.</p>
+      <div class="exemplo">
+        <div style="width: 150px; height: 80px; background: var(--color-primary); color: white; text-align: center; padding: 10px;">
+          Largura: 150px<br>Altura: 80px
         </div>
       </div>
-
-      </div>
-
       <div class="codigo css">
-        div {
-        width: 300px; /* largura fixa */
-        }
-
+.caixa {
+  width: 200px;
+  height: 100px;
+}
       </div>
     </section>
 
     <section>
-      <h2>Height</h2>
-      <p>Define a altura do elemento, como se fosse a <b>altura de um copo</b>.</p>
-
-
+      <h2>min-width & max-width</h2>
+      <p>Definem o tamanho mínimo e máximo que um elemento pode ter.</p>
       <div class="exemplo">
-
-        <p>Define a altura de um elemento</p>
-      </div>
-      </div>
-
-      <div class="codigo css">
-        div {
-        height: 200px;
-        }
-
-      </div>
-    </section>
-
-    <section>
-      <h2>Min-Width</h2>
-      <p>Define a borda de um elemento, como a borda de uma torta ou bolo.</p>
-
-      <div class="exemplo">
-        <div>
-          Define a largura mínima que o elemento pode ter.
-          Mesmo que a tela seja pequena, ele não vai encolher além desse valor.
+        <div style="min-width: 100px; max-width: 250px; background: var(--color-secondary); color: white; padding: 10px;">
+          Esta caixa não fica menor que 100px nem maior que 250px.
         </div>
       </div>
-
       <div class="codigo css">
-        div {
-        min-width: 150px;
-        }
-
+.elemento {
+  min-width: 100px;
+  max-width: 300px;
+}
       </div>
     </section>
 
     <section>
-      <h2>Max-Widht</h2>
-      <p>Define a largura máxima que o elemento pode ter.
-        Mesmo em telas grandes, não vai ultrapassar esse </p>
-
-<<<<<<< HEAD
+      <h2>box-sizing</h2>
+      <p>Controla como o padding e border são calculados no tamanho total.</p>
       <div class="exemplo">
-        <div>
-          Define a largura máxima do elemento.
+        <div style="display: flex; gap: 15px;">
+          <div style="width: 120px; padding: 15px; border: 3px solid var(--color-primary); background: var(--color-accent); text-align: center;">
+            content-box
+          </div>
+          <div style="width: 120px; padding: 15px; border: 3px solid var(--color-primary); background: var(--color-accent); text-align: center; box-sizing: border-box;">
+            border-box
+          </div>
         </div>
       </div>
-
-
-      <div class="codigo">
-=======
       <div class="codigo css">
->>>>>>> c270af228626f446cdb6d296794b5b11735d7cb8
-        div {
-        max-width: 500px;
-        }
+* {
+  box-sizing: border-box; /* mais fácil de usar */
+}
 
+.caixa {
+  width: 200px; /* inclui padding e border */
+  padding: 20px;
+  border: 5px solid black;
+}
       </div>
     </section>
 
     <section>
-      <h2>Min-Height</h2>
-      <p>Define a altura mínima.
-        Mesmo sem conteúdo, a div terá pelo menos aquele valor.</p>
-
+      <h2>overflow</h2>
+      <p>Controla o que acontece quando o conteúdo é maior que o elemento.</p>
       <div class="exemplo">
-        Mesmo vazia, a div terá 100px de altura.
-
+        <div style="width: 150px; height: 60px; border: 2px solid var(--color-primary); padding: 5px; overflow: auto;">
+          Este texto é muito longo para caber nesta pequena caixa, então vai aparecer uma barra de scroll.
+        </div>
       </div>
-      </div>
-
-<<<<<<< HEAD
-      <div class="codigo">
-        div {
-        min-height: 100px;
-=======
       <div class="codigo css">
-        .sorvete {<br>
-        &nbsp;&nbsp;background-color: pink;<br>
-        &nbsp;&nbsp;border-radius: 50%;<br>
-        &nbsp;&nbsp;width: 100px;<br>
-        &nbsp;&nbsp;height: 100px;<br>
->>>>>>> c270af228626f446cdb6d296794b5b11735d7cb8
-        }
-
+.caixa {
+  width: 200px;
+  height: 100px;
+  overflow: auto; /* mostra scroll se precisar */
+}
       </div>
     </section>
 
     <section>
-      <h2>Max-Height</h2>
-      <p>A div não vai ultrapassar 300px de altura, mesmo com muito conteúdo.</p>
-
+      <h2>object-fit</h2>
+      <p>Controla como imagens se ajustam aos containers.</p>
       <div class="exemplo">
-        Define a altura máxima.
+        <div style="width: 120px; height: 80px; border: 2px solid var(--color-primary); background: var(--color-accent); display: flex; align-items: center; justify-content: center;">
+          object-fit
+        </div>
       </div>
-      </div>
-
-      <div class="codigo">
-        div {
-        min-height: 100px;
-        }
-
+      <div class="codigo css">
+.imagem {
+  width: 200px;
+  height: 150px;
+  object-fit: cover; /* preenche cortando se precisar */
+}
       </div>
     </section>
-
-    <section>
-      <h2>Box-Sizing</h2>
-      <p>Controla como o navegador calcula o tamanho de largura e altura de um elemento.</p>
-
-      <div class="exemplo">
-        Se usar border-box, a div sempre terá 200px no total, sem estourar.
-      </div>
-      </div>
-
-      <div class="codigo">
-        div {
-        width: 200px;
-        padding: 20px;
-        box-sizing: border-box; /* inclui padding e border dentro dos 200px */
-        }
-
-      </div>
-    </section>
-
-    <section>
-      <h2>Overflow</h2>
-      <p>Controla o que acontece quando o conteúdo ultrapassa o tamanho definido do elemento.</p>
-
-      <div class="exemplo">
-        Visible: Mostra tudo (mesmo passando dos limites)<br>
-
-        Hidden: Corta o excesso.<br>
-
-        Scroll: Cria barra de rolagem sempre.<br>
-
-        Auto: Cria barra de rolagem só se precisar.<br>
-      </div>
-      </div>
-
-      <div class="codigo">
-        div {
-        width: 150px;
-        height: 100px;
-        overflow: auto;
-        }
-
-      </div>
-    </section>
-
-    <section>
-      <h2>Object-Fit</h2>
-      <p>Controla como uma imagem ou vídeo se ajusta ao espaço do container.</p>
-
-      <div class="exemplo">
-        Fill: estica para caber (pode distorcer).<br>
-
-        Cover: preenche tudo cortando se necessário.<br>
-
-        Contain: mostra tudo, mas pode sobrar espaço.<br>
-
-        None: mantém o tamanho original.<br>
-
-        Scale-down: escolhe entre none e contain, o menor.<br>
-      </div>
-      </div>
-
-      <div class="codigo">
-        img {
-        width: 300px;
-        height: 200px;
-        object-fit: cover;
-        }
-
-      </div>
-    </section>
-
-
+    
     <div class="navegacao-tags">
-      <a href="bordasecantos.html" class="voltar"><i class="fas fa-arrow-left"></i> Tags CSS</a>
-      <a href="posicionamento.html">Mais Propriedades CSS <i class="fas fa-arrow-right"></i></a>
+      <a href="bordasecantos.html" class="voltar"><i class="fas fa-arrow-left"></i> Bordas e Cantos</a>
+      <a href="posicionamento.html">Posicionamento <i class="fas fa-arrow-right"></i></a>
     </div>
   </main>
 </body>
-
 </html>

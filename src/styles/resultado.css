@@ -5,7 +5,7 @@ body.pagina-explicacao {
   padding: 0;
   margin: 0;
   font-family: "Inter", sans-serif;
-  padding-top: 80px;
+  padding-top: 140px;
 }
 
 .pagina-explicacao header {
@@ -20,6 +20,7 @@ body.pagina-explicacao {
   left: 0;
   width: 100%;
   z-index: 1000;
+  min-height: 120px;
 }
 
 .pagina-explicacao header h1 {
@@ -206,11 +207,15 @@ body.pagina-explicacao {
 
 @media (max-width: 768px) {
   body.pagina-explicacao {
-      padding-top: 70px;
+      padding-top: 120px;
   }
-  
+  .pagina-explicacao header {
+    padding: 1rem;
+    min-height: 100px;
+  }
   .pagina-explicacao header h1 {
       font-size: 1.5rem;
+      margin-bottom: 0.5rem;
   }
   
   .pagina-explicacao section {
