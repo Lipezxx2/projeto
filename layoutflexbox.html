@@ -1,260 +1,209 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>🍰 Sobremesa - CSS</title>
   <link rel="stylesheet" href="src/styles/styles.css">
   <link rel="stylesheet" href="src/styles/resultado.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 </head>
-
 <body class="pagina-explicacao">
   <header>
-    <h1><i class="fas fa-ice-cream"></i> Layout com Flexbox - CSS</h1>
-    <a href="index.html"><i class="fas fa-arrow-left"></i> Voltar ao Cardápio</a>
+    <h1> Layout com Flexbox - CSS</h1>
+    <a href="index.html"> Voltar ao Cardápio</a>
   </header>
 
   <main>
     <section>
-      <h2>Ativa o modo flexbox no container</h2>
-      <p>display: flex</p>
-
+      <h2>display: flex</h2>
+      <p>Transforma um elemento em container flexível, alinhando os filhos automaticamente.</p>
+      
       <div class="exemplo">
-        <p>Ativa o modo flexbox no container.<br>
-
-          Os elementos filhos passam a ser organizados em linha ou coluna de forma flexível.</p>
-
-      </div>
-
-<<<<<<< HEAD
-      <div class="codigo">
-        .container {
-        display: flex;
-        }
-
-=======
-      <div class="codigo css">
-        .sabor-morango { color: red; }<br>
-        .sabor-chocolate { color: chocolate; }
->>>>>>> c270af228626f446cdb6d296794b5b11735d7cb8
-      </div>
-    </section>
-
-    <section>
-      <h2>Flex-Direction</h2>
-      <p>Define a direção dos itens.</p>
-
-      <div class="exemplo">
-        <div>
-          <p>Row → em linha (padrão).<br>
-
-            Row-Reverse → em linha invertida.<br>
-
-            Column → em coluna.<br>
-
-            Column-Reverse → em coluna invertida.</p>
+        <p><i class="fas fa-magic"></i> Elementos ficam lado a lado automaticamente:</p>
+        <div style="background: #f0f0f0; padding: 15px; border-radius: 8px; display: flex; gap: 10px;">
+          <div style="background: #e85d04; color: white; padding: 10px; border-radius: 5px; flex: 1; text-align: center;">Item 1</div>
+          <div style="background: #f48c06; color: white; padding: 10px; border-radius: 5px; flex: 1; text-align: center;">Item 2</div>
+          <div style="background: #ffba08; color: #333; padding: 10px; border-radius: 5px; flex: 1; text-align: center;">Item 3</div>
         </div>
       </div>
-
-<<<<<<< HEAD
-      <div class="codigo">
-        .container {
-        display: flex;
-        flex-direction: column;
-=======
+      
       <div class="codigo css">
-        .prato-sobremesa { <br>
-        &nbsp;&nbsp;background-color: lightblue;<br>
-        &nbsp;&nbsp;padding: 15px;<br>
-        &nbsp;&nbsp;border-radius: 8px;<br>
->>>>>>> c270af228626f446cdb6d296794b5b11735d7cb8
-        }
-
+.container {
+  display: flex; /* Ativa o flexbox */
+}
       </div>
     </section>
 
     <section>
-      <h2>Justify-Content</h2>
-      <p>Controla o alinhamento horizontal (quando a direção é row).</p>
-
+      <h2>flex-direction</h2>
+      <p>Define a direção: linha (row) ou coluna (column).</p>
+      
       <div class="exemplo">
-        Flex-start → início.<br>
-
-        Flex-end → final.<br>
-
-        Center → centro.<br>
-
-        Space-between → espaço igual entre itens.<br>
-
-        Space-around → espaço igual em volta dos itens.<br>
-
-        Space-evenly → espaço igual em tudo.<br>
-      </div>
-
-      <div class="codigo">
-        .container {
-        display: flex;
-        justify-content: space-between;
-        }
-
-      </div>
-    </section>
-
-    <section>
-      <h2>Align-Items</h2>
-      <p>Controla o alinhamento vertical dos itens em uma única linha.</p>
-
-      <div class="exemplo">
-        <p>Stretch (padrão) → estica.<br>
-
-          Fex-start → topo.<br>
-
-          Flex-end → embaixo.<br>
-
-          Center → no meio.<br>
-
-          Baseline → alinha pelo texto.</p>
-      </div>
-
-      <div class="codigo">
-        .container {
-        display: flex;
-        align-items: center;
-        }
-
-      </div>
-    </section>
-
-    <section>
-      <h2>Align-Content</h2>
-      <p>Controla o alinhamento vertical das várias linhas, quando o flex-wrap quebra.</p>
-
-      <div class="exemplo">
-        <div>
-          Ela é útil quando há múltiplas linhas e espaço extra no container.
-
+        <p><i class="fas fa-arrows-alt"></i> row vs column:</p>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+          <div>
+            <strong>row (padrão)</strong>
+            <div style="background: #f0f0f0; padding: 10px; border-radius: 8px; display: flex; gap: 5px;">
+              <div style="background: #e85d04; color: white; padding: 8px; border-radius: 5px;">1</div>
+              <div style="background: #f48c06; color: white; padding: 8px; border-radius: 5px;">2</div>
+              <div style="background: #ffba08; color: #333; padding: 8px; border-radius: 5px;">3</div>
+            </div>
+          </div>
+          <div>
+            <strong>column</strong>
+            <div style="background: #f0f0f0; padding: 10px; border-radius: 8px; display: flex; flex-direction: column; gap: 5px;">
+              <div style="background: #e85d04; color: white; padding: 8px; border-radius: 5px;">1</div>
+              <div style="background: #f48c06; color: white; padding: 8px; border-radius: 5px;">2</div>
+              <div style="background: #ffba08; color: #333; padding: 8px; border-radius: 5px;">3</div>
+            </div>
+          </div>
         </div>
       </div>
-
-<<<<<<< HEAD
-      <div class="codigo">
-        .container {
-        display: flex;
-        flex-wrap: wrap;
-        align-content: center;
-=======
+      
       <div class="codigo css">
-        .torta {<br>
-        &nbsp;&nbsp;border: 3px dashed green;<br>
-        &nbsp;&nbsp;padding: 15px;<br>
->>>>>>> c270af228626f446cdb6d296794b5b11735d7cb8
-        }
-
+.container {
+  flex-direction: row; /* Horizontal */
+  flex-direction: column; /* Vertical */
+}
       </div>
     </section>
 
     <section>
-      <h2>Flex-Wrap</h2>
-      <p>Define se os itens podem ou não quebrar linha.</p>
-
+      <h2>justify-content</h2>
+      <p>Alinha elementos horizontalmente (no eixo principal).</p>
+      
       <div class="exemplo">
-        <div>
-          Nowrap (padrão) → tudo em uma linha.<br>
-
-<<<<<<< HEAD
-          Wrap → quebra em novas linhas.<br>
-=======
-      <div class="codigo css">
-        .porção-pequena { font-size: 12px; }<br>
-        .porção-média { font-size: 18px; }<br>
-        .porção-grande { font-size: 24px; }
-      </div>
-    </section>
-    
-    <section>
-      <h2>border-radius</h2>
-      <p>Arredonda os cantos dos elementos, como arredondar uma bola de sorvete.</p>
->>>>>>> c270af228626f446cdb6d296794b5b11735d7cb8
-
-          Wrap-reverse → quebra invertido.<br>
+        <p><i class="fas fa-align-center"></i> Principais valores:</p>
+        <div style="margin: 10px 0;">
+          <strong>center:</strong>
+          <div style="background: #f0f0f0; padding: 10px; border-radius: 8px; display: flex; justify-content: center; gap: 5px;">
+            <div style="background: #e85d04; color: white; padding: 8px; border-radius: 5px;">Item</div>
+            <div style="background: #f48c06; color: white; padding: 8px; border-radius: 5px;">Item</div>
+          </div>
+        </div>
+        <div style="margin: 10px 0;">
+          <strong>space-between:</strong>
+          <div style="background: #f0f0f0; padding: 10px; border-radius: 8px; display: flex; justify-content: space-between;">
+            <div style="background: #e85d04; color: white; padding: 8px; border-radius: 5px;">Item</div>
+            <div style="background: #f48c06; color: white; padding: 8px; border-radius: 5px;">Item</div>
+            <div style="background: #ffba08; color: #333; padding: 8px; border-radius: 5px;">Item</div>
+          </div>
         </div>
       </div>
-
-<<<<<<< HEAD
-      <div class="codigo">
-
-        .container {
-        display: flex;
-        flex-wrap: wrap;
-=======
+      
       <div class="codigo css">
-        .sorvete {<br>
-        &nbsp;&nbsp;background-color: pink;<br>
-        &nbsp;&nbsp;border-radius: 50%;<br>
-        &nbsp;&nbsp;width: 100px;<br>
-        &nbsp;&nbsp;height: 100px;<br>
->>>>>>> c270af228626f446cdb6d296794b5b11735d7cb8
-        }
-
+.container {
+  justify-content: center; /* Centro */
+  justify-content: space-between; /* Espaço entre */
+  justify-content: flex-start; /* Início */
+}
       </div>
     </section>
 
     <section>
-      <h2>GAP</h2>
-      <p>Define o espaço entre os itens (sem precisar usar margin).</p>
-
+      <h2>align-items</h2>
+      <p>Alinha elementos verticalmente (no eixo transversal).</p>
+      
       <div class="exemplo">
-        <div>
-          A propriedade CSS gap define os espaços entre as linhas e colunas.
+        <p><i class="fas fa-align-justify"></i> center vs flex-start:</p>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+          <div>
+            <strong>center</strong>
+            <div style="background: #f0f0f0; padding: 10px; border-radius: 8px; display: flex; align-items: center; height: 80px; gap: 5px;">
+              <div style="background: #e85d04; color: white; padding: 8px; border-radius: 5px;">Item</div>
+              <div style="background: #f48c06; color: white; padding: 8px 8px 20px 8px; border-radius: 5px;">Maior</div>
+            </div>
+          </div>
+          <div>
+            <strong>flex-start</strong>
+            <div style="background: #f0f0f0; padding: 10px; border-radius: 8px; display: flex; align-items: flex-start; height: 80px; gap: 5px;">
+              <div style="background: #e85d04; color: white; padding: 8px; border-radius: 5px;">Item</div>
+              <div style="background: #f48c06; color: white; padding: 8px 8px 20px 8px; border-radius: 5px;">Maior</div>
+            </div>
+          </div>
         </div>
       </div>
-
-      <div class="codigo">
-        .container {
-        display: flex;
-        gap: 20px;
-        }
-
+      
+      <div class="codigo css">
+.container {
+  align-items: center; /* Centro */
+  align-items: flex-start; /* Topo */
+  align-items: stretch; /* Estica */
+}
       </div>
     </section>
 
     <section>
-      <h2>Flex (atalho para grow, shrink, basis)</h2>
-      <p>Forma curta de definir como cada item vai crescer, encolher e qual o tamanho base.</p>
-
+      <h2>flex-wrap</h2>
+      <p>Controla se elementos quebram para nova linha.</p>
+      
       <div class="exemplo">
-        <div>
-          Flex-grow → quanto o item pode crescer proporcionalmente.<br>
+        <p><i class="fas fa-th-large"></i> wrap permite quebra de linha:</p>
+        <div style="background: #f0f0f0; padding: 15px; border-radius: 8px; display: flex; flex-wrap: wrap; gap: 5px; width: 250px;">
+          <div style="background: #e85d04; color: white; padding: 8px 15px; border-radius: 5px;">Item 1</div>
+          <div style="background: #f48c06; color: white; padding: 8px 15px; border-radius: 5px;">Item 2</div>
+          <div style="background: #ffba08; color: #333; padding: 8px 15px; border-radius: 5px;">Item 3</div>
+          <div style="background: #e85d04; color: white; padding: 8px 15px; border-radius: 5px;">Item 4</div>
+        </div>
+        <p style="color: #666; font-style: italic;"><i class="fas fa-info-circle"></i> Container pequeno força a quebra</p>
+      </div>
+      
+      <div class="codigo css">
+.container {
+  flex-wrap: wrap; /* Quebra linha */
+  flex-wrap: nowrap; /* Não quebra */
+}
+      </div>
+    </section>
 
-          0 (padrão) = não cresce.<br>
-
-          1 = cresce ocupando espaço disponível.<br>
-
-          Flex-shrink → quanto o item pode encolher.<br>
-
-          0 = não encolhe.<br>
-
-          1 = encolhe se precisar.<br>
-
-          Flex-basis → tamanho base inicial do item (antes de aplicar grow/shrink).<br>
+    <section>
+      <h2>flex (grow/shrink/basis)</h2>
+      <p>Controla como elementos crescem, encolhem e seu tamanho base.</p>
+      
+      <div class="exemplo">
+        <p><i class="fas fa-expand-arrows-alt"></i> Crescimento proporcional:</p>
+        <div style="background: #f0f0f0; padding: 15px; border-radius: 8px; display: flex; gap: 5px;">
+          <div style="background: #e85d04; color: white; padding: 8px; border-radius: 5px; flex: 1; text-align: center;">flex: 1</div>
+          <div style="background: #f48c06; color: white; padding: 8px; border-radius: 5px; flex: 2; text-align: center;">flex: 2 (dobro)</div>
+          <div style="background: #ffba08; color: #333; padding: 8px; border-radius: 5px; flex: 0 0 80px; text-align: center;">80px fixo</div>
         </div>
       </div>
+      
+      <div class="codigo css">
+.item {
+  flex: 1; /* Cresce igualmente */
+  flex: 2; /* Cresce 2x mais */
+  flex: 0 0 100px; /* Tamanho fixo */
+}
+      </div>
+    </section>
 
-      <div class="codigo">
-        .item {
-        flex: 1 1 200px; /* grow shrink basis */
-        }
-
+    <section>
+      <h2>order</h2>
+      <p>Reordena elementos visualmente sem alterar o HTML.</p>
+      
+      <div class="exemplo">
+        <p><i class="fas fa-sort"></i> Mudando ordem visual:</p>
+        <div style="background: #f0f0f0; padding: 15px; border-radius: 8px; display: flex; gap: 5px;">
+          <div style="background: #e85d04; color: white; padding: 8px; border-radius: 5px; order: 3;">1º HTML (order: 3)</div>
+          <div style="background: #f48c06; color: white; padding: 8px; border-radius: 5px; order: 1;">2º HTML (order: 1)</div>
+          <div style="background: #ffba08; color: #333; padding: 8px; border-radius: 5px; order: 2;">3º HTML (order: 2)</div>
+        </div>
+        <p style="color: #666; font-style: italic;"><i class="fas fa-lightbulb"></i> Menor número aparece primeiro</p>
+      </div>
+      
+      <div class="codigo css">
+.item1 { order: 3; } /* Último */
+.item2 { order: 1; } /* Primeiro */
+.item3 { order: 2; } /* Meio */
       </div>
     </section>
 
     <div class="navegacao-tags">
-      <a href="posicionamento.html" class="voltar"><i class="fas fa-arrow-left"></i> Tags CSS</a>
-      <a href="layoutgrid.html">Mais Propriedades CSS <i class="fas fa-arrow-right"></i></a>
+        <a href="posicionamento.html" class="voltar"><i class="fas fa-arrow-left"></i> Posicionamento CSS</a>
+        <a href="layoutgrid.html"> Layout Grid <i class="fas fa-arrow-right"></i></a>
     </div>
   </main>
 </body>
-
 </html>

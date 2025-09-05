@@ -1,199 +1,211 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>🍰 Sobremesa - CSS</title>
   <link rel="stylesheet" href="src/styles/styles.css">
   <link rel="stylesheet" href="src/styles/resultado.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 </head>
-
 <body class="pagina-explicacao">
   <header>
-    <h1><i class="fas fa-ice-cream"></i> Layout com Grid - CSS</h1>
-    <a href="index.html"><i class="fas fa-arrow-left"></i> Voltar ao Cardápio</a>
+    <h1> Layout com Grid - CSS</h1>
+    <a href="index.html"> Voltar ao Cardápio</a>
   </header>
 
   <main>
     <section>
-      <h2>Display: Grid</h2>
-      <p>Transforma um elemento em container de grid.</p>
-
+      <h2>display: grid</h2>
+      <p>Cria um sistema de layout bidimensional com linhas e colunas, perfeito para layouts complexos.</p>
+      
       <div class="exemplo">
-        <p>Os filhos desse elemento passam a ser organizados em linhas e colunas.</p>
-        <p>É como transformar a caixa em uma grade invisível onde você pode posicionar os itens.</p>
+        <p><i class="fas fa-th"></i> Grid organiza elementos em linhas e colunas:</p>
+        <div style="background: #f0f0f0; padding: 15px; border-radius: 8px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px;">
+          <div style="background: #e85d04; color: white; padding: 10px; border-radius: 5px; text-align: center;">Item 1</div>
+          <div style="background: #f48c06; color: white; padding: 10px; border-radius: 5px; text-align: center;">Item 2</div>
+          <div style="background: #ffba08; color: #333; padding: 10px; border-radius: 5px; text-align: center;">Item 3</div>
+          <div style="background: #e85d04; color: white; padding: 10px; border-radius: 5px; text-align: center;">Item 4</div>
+          <div style="background: #f48c06; color: white; padding: 10px; border-radius: 5px; text-align: center;">Item 5</div>
+          <div style="background: #ffba08; color: #333; padding: 10px; border-radius: 5px; text-align: center;">Item 6</div>
+        </div>
+        <p style="color: #666; font-style: italic;"><i class="fas fa-lightbulb"></i> Grid de 3 colunas com 2 linhas automáticas</p>
       </div>
-
+      
       <div class="codigo css">
-        .container {
-        display: grid;
-        }
-
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* 3 colunas iguais */
+}
       </div>
     </section>
 
     <section>
-      <h2>Grid-Template-Columns</h2>
-      <p>Define quantas colunas o grid terá e os tamanhos delas.</p>
-
+      <h2>grid-template-columns/rows</h2>
+      <p>Define o tamanho e quantidade de colunas e linhas da grade.</p>
+      
       <div class="exemplo">
-        <p>Cria 3 colunas:<br>
-
-          A primeira com 100px,<br>
-
-          A segunda com 200px,<br>
-
-          A terceira ocupando o resto do espaço (auto).</p>
+        <p><i class="fas fa-columns"></i> Diferentes configurações de colunas:</p>
+        <div style="margin: 10px 0;">
+          <strong>Colunas fixas:</strong>
+          <div style="background: #f0f0f0; padding: 10px; border-radius: 8px; display: grid; grid-template-columns: 100px 200px 100px; gap: 5px;">
+            <div style="background: #e85d04; color: white; padding: 8px; border-radius: 5px; text-align: center;">100px</div>
+            <div style="background: #f48c06; color: white; padding: 8px; border-radius: 5px; text-align: center;">200px</div>
+            <div style="background: #ffba08; color: #333; padding: 8px; border-radius: 5px; text-align: center;">100px</div>
+          </div>
+        </div>
+        <div style="margin: 10px 0;">
+          <strong>Colunas flexíveis:</strong>
+          <div style="background: #f0f0f0; padding: 10px; border-radius: 8px; display: grid; grid-template-columns: 1fr 2fr 1fr; gap: 5px;">
+            <div style="background: #e85d04; color: white; padding: 8px; border-radius: 5px; text-align: center;">1fr</div>
+            <div style="background: #f48c06; color: white; padding: 8px; border-radius: 5px; text-align: center;">2fr (dobro)</div>
+            <div style="background: #ffba08; color: #333; padding: 8px; border-radius: 5px; text-align: center;">1fr</div>
+          </div>
+        </div>
       </div>
-
+      
       <div class="codigo css">
-        .container {
-        display: grid;
-        grid-template-columns: 100px 200px auto;
-        }
-
+.container {
+  grid-template-columns: 100px 200px 100px; /* Fixas */
+  grid-template-columns: 1fr 2fr 1fr; /* Flexíveis */
+  grid-template-rows: 50px 100px; /* 2 linhas */
+}
       </div>
     </section>
 
     <section>
-      <h2>Grid-Template-Rows</h2>
-      <p>Define a altura das linhas do grid.</p>
-
+      <h2>repeat</h2>
+      <p>Simplifica a criação de múltiplas colunas ou linhas com o mesmo tamanho.</p>
+      
       <div class="exemplo">
-        Cria 3 linhas:<br>
-
-        A primeira com 50px,<br>
-
-        A segunda com 100px,<br>
-
-        A terceira ocupando o espaço restante.
+        <p><i class="fas fa-copy"></i> repeat() evita repetir código:</p>
+        <div style="background: #f0f0f0; padding: 15px; border-radius: 8px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 5px;">
+          <div style="background: #e85d04; color: white; padding: 8px; border-radius: 5px; text-align: center;">1</div>
+          <div style="background: #f48c06; color: white; padding: 8px; border-radius: 5px; text-align: center;">2</div>
+          <div style="background: #ffba08; color: #333; padding: 8px; border-radius: 5px; text-align: center;">3</div>
+          <div style="background: #e85d04; color: white; padding: 8px; border-radius: 5px; text-align: center;">4</div>
+          <div style="background: #f48c06; color: white; padding: 8px; border-radius: 5px; text-align: center;">5</div>
+          <div style="background: #ffba08; color: #333; padding: 8px; border-radius: 5px; text-align: center;">6</div>
+        </div>
+        <p style="color: #666; font-style: italic;"><i class="fas fa-info-circle"></i> repeat(4, 1fr) = 4 colunas iguais</p>
       </div>
-
+      
       <div class="codigo css">
-        .container {
-        display: grid;
-        grid-template-rows: 50px 100px auto;
-        }
-
+.container {
+  grid-template-columns: repeat(4, 1fr); /* 4 colunas iguais */
+  grid-template-columns: repeat(3, 100px); /* 3 colunas de 100px */
+  grid-template-rows: repeat(2, 80px); /* 2 linhas de 80px */
+}
       </div>
     </section>
 
     <section>
-      <h2>Gap</h2>
-      <p>Define o espaçamento entre colunas e linhas (sem precisar usar margin).</p>
-
+      <h2>minmax</h2>
+      <p>Define tamanho mínimo e máximo para colunas/linhas, criando layouts responsivos.</p>
+      
       <div class="exemplo">
-        <p>Coloca 20px de espaço entre os itens, tanto na horizontal quanto na vertical.<br>
-          Row-gap → só entre linhas<br>
-          Column-gap → só entre colunas</p>
+        <p><i class="fas fa-expand-arrows-alt"></i> Colunas com tamanho flexível:</p>
+        <div style="background: #f0f0f0; padding: 15px; border-radius: 8px; display: grid; grid-template-columns: minmax(100px, 1fr) minmax(200px, 2fr) minmax(100px, 1fr); gap: 5px;">
+          <div style="background: #e85d04; color: white; padding: 8px; border-radius: 5px; text-align: center;">min: 100px</div>
+          <div style="background: #f48c06; color: white; padding: 8px; border-radius: 5px; text-align: center;">min: 200px</div>
+          <div style="background: #ffba08; color: #333; padding: 8px; border-radius: 5px; text-align: center;">min: 100px</div>
+        </div>
+        <p style="color: #666; font-style: italic;"><i class="fas fa-lightbulb"></i> Redimensione a tela para ver a flexibilidade</p>
       </div>
-
+      
       <div class="codigo css">
-        .container {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 20px;
-        }
-
-    </section>
-
-    <section>
-      <h2>Place-Content</h2>
-      <p>Alinha o grid inteiro dentro do container.</p>
-
-      <div class="exemplo">
-        <p>As 6 células vão ficar centralizadas no container de 400px.<br>
-          É um atalho para align-content (vertical) e justify-content (horizontal).
-        </p>
-      </div>
-
-      <div class="codigo css">
-        .container {
-        display: grid;
-        grid-template-columns: repeat(3, 100px);
-        grid-template-rows: repeat(2, 100px);
-        place-content: center;
-        height: 400px;
-        }
-
+.container {
+  grid-template-columns: minmax(200px, 1fr) minmax(300px, 2fr);
+  /* Mínimo 200px, máximo 1fr | Mínimo 300px, máximo 2fr */
+}
       </div>
     </section>
 
     <section>
-      <h2>Place-Items</h2>
-      <p>Centraliza os itens dentro de cada célula do grid.</p>
-
+      <h2>grid-column/row</h2>
+      <p>Controla quantas colunas/linhas um item ocupa na grade.</p>
+      
       <div class="exemplo">
-        <p>Todos os itens ficam centralizados no meio da célula.<br>
-          É um atalho para align-items (vertical) e justify-items (horizontal).
-        </p>
+        <p><i class="fas fa-expand"></i> Elementos ocupando múltiplas células:</p>
+        <div style="background: #f0f0f0; padding: 15px; border-radius: 8px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 5px;">
+          <div style="background: #e85d04; color: white; padding: 8px; border-radius: 5px; text-align: center; grid-column: span 2;">span 2 colunas</div>
+          <div style="background: #f48c06; color: white; padding: 8px; border-radius: 5px; text-align: center;">Item</div>
+          <div style="background: #ffba08; color: #333; padding: 8px; border-radius: 5px; text-align: center;">Item</div>
+          <div style="background: #e85d04; color: white; padding: 8px; border-radius: 5px; text-align: center;">Item</div>
+          <div style="background: #f48c06; color: white; padding: 8px; border-radius: 5px; text-align: center; grid-column: span 3;">span 3 colunas</div>
+        </div>
       </div>
-
+      
       <div class="codigo css">
-        .container {
-        display: grid;
-        place-items: center;
-        }
-
+.item-grande {
+  grid-column: span 2; /* Ocupa 2 colunas */
+  grid-row: span 2; /* Ocupa 2 linhas */
+  grid-column: 1 / 4; /* Da coluna 1 até 4 */
+}
       </div>
     </section>
 
     <section>
-      <h2>Grid-Column</h2>
-      <p>Controla em quais colunas um item vai começar e terminar.</p>
-
+      <h2>place-items</h2>
+      <p>Alinha todos os itens dentro de suas células (shorthand para align-items + justify-items).</p>
+      
       <div class="exemplo">
-        <p>O item 1 vai ocupar da coluna 1 até a 3 (ou seja, pega 2 colunas inteiras).</p>
+        <p><i class="fas fa-crosshairs"></i> Diferentes alinhamentos:</p>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+          <div>
+            <strong>place-items: start</strong>
+            <div style="background: #f0f0f0; padding: 10px; border-radius: 8px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; place-items: start; height: 80px;">
+              <div style="background: #e85d04; color: white; padding: 5px; border-radius: 3px; font-size: 0.8em;">Item</div>
+              <div style="background: #f48c06; color: white; padding: 5px; border-radius: 3px; font-size: 0.8em;">Item</div>
+            </div>
+          </div>
+          <div>
+            <strong>place-items: center</strong>
+            <div style="background: #f0f0f0; padding: 10px; border-radius: 8px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; place-items: center; height: 80px;">
+              <div style="background: #e85d04; color: white; padding: 5px; border-radius: 3px; font-size: 0.8em;">Item</div>
+              <div style="background: #f48c06; color: white; padding: 5px; border-radius: 3px; font-size: 0.8em;">Item</div>
+            </div>
+          </div>
+        </div>
       </div>
-
+      
       <div class="codigo css">
-        .item1 {
-        grid-column: 1 / 3;
-        }
-
+.container {
+  place-items: center; /* Centro da célula */
+  place-items: start; /* Início da célula */
+  place-items: stretch; /* Preenche célula */
+}
       </div>
     </section>
 
-
     <section>
-      <h2>Grid-Row</h2>
-      <p>Controla em quais linhas um item vai começar e terminar.</p>
-
+      <h2>place-content</h2>
+      <p>Quando sua "tabela" é menor que o espaço disponível, isso decide onde ela fica: no centro, na esquerda, etc.</p>
+      
       <div class="exemplo">
-        <p>O item 2 vai ocupar da linha 2 até a 4.</p>
+        <p><i class="fas fa-arrows-alt"></i> Alinhamento da grade inteira:</p>
+        <div style="background: #f0f0f0; padding: 15px; border-radius: 8px; display: grid; grid-template-columns: repeat(2, 80px); grid-template-rows: repeat(2, 40px); gap: 5px; place-content: center; height: 120px;">
+          <div style="background: #e85d04; color: white; padding: 5px; border-radius: 3px; text-align: center; font-size: 0.8em;">1</div>
+          <div style="background: #f48c06; color: white; padding: 5px; border-radius: 3px; text-align: center; font-size: 0.8em;">2</div>
+          <div style="background: #ffba08; color: #333; padding: 5px; border-radius: 3px; text-align: center; font-size: 0.8em;">3</div>
+          <div style="background: #e85d04; color: white; padding: 5px; border-radius: 3px; text-align: center; font-size: 0.8em;">4</div>
+        </div>
+        <p style="color: #666; font-style: italic;"><i class="fas fa-info-circle"></i> Grade pequena centralizada no container grande</p>
       </div>
-
+      
       <div class="codigo css">
-        .item2 {
-        grid-row: 2 / 4;
-        }
-      </div>
-    </section>
-
-    <section>
-      <h2>Repeat</h2>
-      <p>Facilita a repetição de colunas ou linhas.</p>
-
-      <div class="exemplo">
-        <p>Cria 3 colunas iguais, cada uma ocupando 1 fração (1fr) do espaço.</p>
-      </div>
-
-      <div class="codigo css">
-        .container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        }
-
+.container {
+  place-content: center; /* Centraliza grade */
+  place-content: start; /* Início do container */
+  place-content: space-between; /* Espaça grade */
+}
       </div>
     </section>
 
     <div class="navegacao-tags">
-      <a href="layoutflexbox.html" class="voltar"><i class="fas fa-arrow-left"></i> Tags CSS</a>
-      <a href="responsividade.html">Mais Propriedades CSS <i class="fas fa-arrow-right"></i></a>
+        <a href="layoutflexbox.html" class="voltar"><i class="fas fa-arrow-left"></i> Layout Flexbox</a>
+        <a href="responsividade.html"> Responsividade <i class="fas fa-arrow-right"></i></a>
     </div>
   </main>
 </body>
-
 </html>

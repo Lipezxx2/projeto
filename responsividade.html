@@ -6,172 +6,202 @@
   <title>🍰 Sobremesa - CSS</title>
   <link rel="stylesheet" href="src/styles/styles.css">
   <link rel="stylesheet" href="src/styles/resultado.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 </head>
 <body class="pagina-explicacao">
   <header>
-    <h1><i class="fas fa-ice-cream"></i> Responsividade e Unidades - CSS</h1>
-    <a href="index.html"><i class="fas fa-arrow-left"></i> Voltar ao Cardápio</a>
+    <h1> Responsividade e Unidades - CSS</h1>
+    <a href="index.html"> Voltar ao Cardápio</a>
   </header>
 
   <main>
     <section>
       <h2>@media (breakpoints)</h2>
-      <p>Define estilos que se adaptam ao tamanho da tela, como ajustar a louça ao tamanho da mesa.</p>
-
+      <p>É como ter "regras diferentes" para telas pequenas e grandes. O site muda automaticamente dependendo do tamanho da tela!</p>
+      
       <div class="exemplo">
-        <p style="color: red;">Ideal para **layouts responsivos** que funcionam bem em celular, tablet ou desktop.</p>
-        <p style="color: chocolate;">Layout que se adapta - como uma sobremesa servida no prato certo 🍽️</p>
+        <p><i class="fas fa-mobile-alt"></i> Exemplo: texto que muda de tamanho conforme a tela:</p>
+        <div style="background: #f0f0f0; padding: 15px; border-radius: 8px; text-align: center;">
+          <div style="background: #e85d04; color: white; padding: 15px; border-radius: 5px; font-size: 18px;">
+            <i class="fas fa-desktop"></i> No computador: texto grande
+          </div>
+          <div style="background: #f48c06; color: white; padding: 10px; border-radius: 5px; margin-top: 10px; font-size: 14px;">
+            <i class="fas fa-tablet-alt"></i> No tablet: texto médio
+          </div>
+          <div style="background: #ffba08; color: #333; padding: 8px; border-radius: 5px; margin-top: 10px; font-size: 12px;">
+            <i class="fas fa-mobile-alt"></i> No celular: texto pequeno
+          </div>
+        </div>
+        <p style="color: #666; font-style: italic;"><i class="fas fa-lightbulb"></i> Cada tela tem suas regras especiais</p>
       </div>
-
+      
       <div class="codigo css">
-          style
-    .caixa {
-      background-color: lightgray;
-      padding: 20px;
-      font-size: 16px;
-      text-align: center;
-    }
+/* Regra normal (todos os tamanhos) */
+.texto { font-size: 18px; }
 
-    /* Tablet (>= 768px) */
-    @media (min-width: 768px) {
-      .caixa {
-        background-color: lightblue;
-        font-size: 18px;
-      }
-    }
+/* Regra especial para tablet */
+@media (max-width: 768px) {
+  .texto { font-size: 16px; }
+}
 
-    /* Desktop (>= 1024px) */
-    @media (min-width: 1024px) {
-      .caixa {
-        background-color: lightgreen;
-        font-size: 20px;
-      }
-    }
-    /style
+/* Regra especial para celular */
+@media (max-width: 480px) {
+  .texto { font-size: 14px; }
+}
       </div>
     </section>
 
     <section>
-      <h2>container/larguras fluídas (max-width)</h2>
-      <p>Define a largura máxima de um elemento, permitindo que ele se ajuste ao tamanho da tela, mas sem ultrapassar um limite ideal, como o prato onde seu alimento é servido sem ultrapassar o limite ideal do prato.</p>
-
+      <h2>max-width (larguras fluídas)</h2>
+      <p>É como uma "cerca invisível" que não deixa algo ficar maior que um tamanho. Perfeito para containers que se adaptam!</p>
+      
       <div class="exemplo">
-        <div style="background-color: lightblue; padding: 15px; border-radius: 8px;">
-          <p>width: 100%→ O recipientecresce ou diminui com a tela</p>
-          <p>max-width: 1200px → Mas nunca fica maior que 1200px, mesmo em telas grandes.</p>
-          <p>padding: 20px → Garante um espaço interno, evitando que o conteúdo encoste nas bordas.</p>
-          <p>margin: 0 auto → Centraliza horizontalmente o container na tela.</p>
+        <p><i class="fas fa-arrows-alt-h"></i> Container que se adapta mas tem limite:</p>
+        <div style="background: #f0f0f0; padding: 15px; border-radius: 8px;">
+          <div style="background: #e85d04; color: white; padding: 15px; border-radius: 5px; max-width: 400px; margin: 0 auto; text-align: center;">
+            <strong>max-width: 400px</strong><br>
+            <small>Nunca fica maior que 400px, mas pode ser menor</small>
+          </div>
+        </div>
+        <p style="color: #666; font-style: italic;"><i class="fas fa-info-circle"></i> Redimensione a janela para ver a adaptação</p>
+      </div>
+      
+      <div class="codigo css">
+.container {
+  max-width: 1200px; /* Nunca maior que 1200px */
+  width: 100%; /* Usa toda largura disponível */
+  margin: 0 auto; /* Centraliza */
+}
+      </div>
+    </section>
+
+    <section>
+      <h2>Imagens responsivas</h2>
+      <p>Faz as imagens "encolherem" quando a tela fica pequena, sem quebrar o layout. A imagem sempre cabe na tela!</p>
+      
+      <div class="exemplo">
+        <p><i class="fas fa-image"></i> Imagem que se adapta ao container:</p>
+        <div style="background: #f0f0f0; padding: 15px; border-radius: 8px; max-width: 300px;">
+          <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iNDAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2U4NWQwNCIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxOCI+SW1hZ2VtIDQwMHgyMDA8L3RleHQ+PC9zdmc+" style="max-width: 100%; height: auto; border-radius: 5px;">
+        </div>
+        <p style="color: #666; font-style: italic;"><i class="fas fa-lightbulb"></i> A imagem nunca "estoura" do container</p>
+      </div>
+      
+      <div class="codigo css">
+img {
+  max-width: 100%; /* Nunca maior que o pai */
+  height: auto; /* Mantém proporção */
+}
+      </div>
+    </section>
+
+    <section>
+      <h2>Unidades % (porcentagem)</h2>
+      <p>É como dizer "use metade do espaço" ou "use tudo". A % sempre se baseia no elemento pai, como uma fatia de bolo!</p>
+      
+      <div class="exemplo">
+        <p><i class="fas fa-percentage"></i> Diferentes porcentagens do mesmo espaço:</p>
+        <div style="background: #f0f0f0; padding: 15px; border-radius: 8px;">
+          <div style="background: #e85d04; color: white; padding: 10px; border-radius: 5px; width: 100%; margin-bottom: 5px; text-align: center;">
+            <strong>width: 100%</strong> - Usa todo o espaço
+          </div>
+          <div style="background: #f48c06; color: white; padding: 10px; border-radius: 5px; width: 50%; margin-bottom: 5px; text-align: center;">
+            <strong>width: 50%</strong> - Metade
+          </div>
+          <div style="background: #ffba08; color: #333; padding: 10px; border-radius: 5px; width: 25%; text-align: center;">
+            <strong>width: 25%</strong> - Um quarto
+          </div>
         </div>
       </div>
-
+      
       <div class="codigo css">
-            .container {
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
-      background-color: lightgray;
-      border-radius: 8px;
-    }
+.metade { width: 50%; } /* Metade do pai */
+.tudo { width: 100%; } /* Todo o espaço do pai */
+.quarto { width: 25%; } /* Um quarto do pai */
       </div>
     </section>
 
     <section>
-      <h2>imagens responsivas</h2>
-      <p>Assim como uma sobremesa que se adapta ao tamanho do prato, a imagem também deve se ajustar ao espaço disponível, sem perder a proporção.</p>
-
+      <h2>Unidades rem</h2>
+      <p>É baseado no tamanho da letra "raiz" da página. Se você mudar o tamanho base, tudo muda junto. É como um "zoom" inteligente!</p>
+      
       <div class="exemplo">
-        <p>A imagem se ajusta ao prato – sempre bonita em qualquer tamanho</p>
+        <p><i class="fas fa-text-height"></i> Diferentes tamanhos baseados na raiz:</p>
+        <div style="background: #f0f0f0; padding: 15px; border-radius: 8px; font-size: 16px;">
+          <div style="background: #e85d04; color: white; padding: 8px; border-radius: 5px; margin: 5px 0; font-size: 0.8rem;">
+            <strong>0.8rem</strong> - Menor que o padrão
+          </div>
+          <div style="background: #f48c06; color: white; padding: 8px; border-radius: 5px; margin: 5px 0; font-size: 1rem;">
+            <strong>1rem</strong> - Tamanho padrão (16px)
+          </div>
+          <div style="background: #ffba08; color: #333; padding: 8px; border-radius: 5px; margin: 5px 0; font-size: 1.5rem;">
+            <strong>1.5rem</strong> - 1.5x maior
+          </div>
+        </div>
+        <p style="color: #666; font-style: italic;"><i class="fas fa-info-circle"></i> 1rem = tamanho padrão da página (geralmente 16px)</p>
       </div>
-
+      
       <div class="codigo css">
-         
-         .img-sobremesa {
-      max-width: 100%;   /* não ultrapassa o espaço disponível */
-      height: auto;      /* mantém a proporção */
-      border-radius: 8px;
-      }
-        
+.pequeno { font-size: 0.8rem; } /* Menor */
+.normal { font-size: 1rem; } /* Padrão */
+.grande { font-size: 1.5rem; } /* Maior */
       </div>
     </section>
 
     <section>
-      <h2>unidades %</h2>
-      <p>Define tamanhos proporcionais ao espaço disponível, como uma sobremesa que se ajusta ao tamanho do prato em que é servida.</p>
-
+      <h2>Unidades vw/vh</h2>
+      <p>vw = "pedaços da largura da tela" e vh = "pedaços da altura da tela". 100vw = tela inteira de largura!</p>
+      
       <div class="exemplo">
-        <p> Largura em % - a sobremesa se adapta ao prato</p>
-      <div class="codigo css">
-          .prato-sobremesa {
-      width: 80%;        /* ocupa 80% da largura do prato (container) */
-      padding: 10px;
-      background-color: lightgreen;
-      border-radius: 6px;
-  }
-    </section>
-    
-    <section>
-      <h2>rem</h2>
-      <p>Define tamanhos proporcionais à raiz do documento (geralmente o tamanho da fonte do elemento <html>), como uma sobremesa servida sempre na mesma medida da colher principal.</p>
-
-      <div class="exemplo">
-        <p>tamanho padrão da colher principal</p>
+        <p><i class="fas fa-expand"></i> Tamanhos baseados na tela:</p>
+        <div style="background: #f0f0f0; padding: 15px; border-radius: 8px; text-align: center;">
+          <div style="background: #e85d04; color: white; padding: 10px; border-radius: 5px; width: 50vw; max-width: 100%; margin: 5px auto;">
+            <strong>width: 50vw</strong><br>
+            <small>Metade da largura da tela</small>
+          </div>
+          <div style="background: #f48c06; color: white; padding: 10px; border-radius: 5px; height: 20vh; display: flex; align-items: center; justify-content: center; margin: 5px 0;">
+            <div>
+              <strong>height: 20vh</strong><br>
+              <small>20% da altura da tela</small>
+            </div>
+          </div>
+        </div>
+        <p style="color: #666; font-style: italic;"><i class="fas fa-lightbulb"></i> vw/vh sempre se baseiam no tamanho da janela</p>
       </div>
-
+      
       <div class="codigo css">
-        .prato-sobremesa {
-      font-size: 1.5rem;   /* 1.5 vezes o tamanho base definido no <html> */
-      padding: 1rem;       /* espaçamento proporcional ao tamanho raiz */
-      background-color: lightcoral;
-      border-radius: 0.5rem;
-  }
-      </div>
-    </section>
-    
-    <section>
-      <h2>vw/vh</h2>
-      <p>Definem tamanhos proporcionais à tela, É como uma sobremesa que sempre ocupa a mesma fração do prato, não importa o tamanho dele.</p>
-
-      <div class="exemplo">
-        <p>a sobremesa cresce ou encolhe conforme o prato</p>
-      </div>
-
-      <div class="codigo css">
-        .prato-sobremesa {
-      width: 60vw;        /* ocupa 60% da largura da tela */
-      height: 30vh;       /* ocupa 30% da altura da tela */
-      background-color: lightseagreen;
-      border-radius: 10px;
-  }
+.tela-inteira { width: 100vw; } /* Largura total da tela */
+.metade-tela { width: 50vw; } /* Metade da largura da tela */
+.altura-cheia { height: 100vh; } /* Altura total da tela */
       </div>
     </section>
 
     <section>
       <h2>clamp()</h2>
-      <p>Define um valor que se ajusta automaticamente, respeitando um mínimo e um máximo. É como servir a sobremesa: nunca muito pequena, nunca exagerada — sempre no tamanho ideal.</p>
-
-      <div class="exemplo">
-        <p>Fonte que se adapta: mínima, ideal e máxima – a sobremesa sempre no ponto certo</p>
-      </div>
-
-      <div class="codigo css">
-        .prato-sobremesa {
-      font-size: clamp(1rem, 2.5vw, 2rem);  
-      /* nunca menor que 1rem, cresce conforme a tela (2.5vw), mas nunca passa de 2rem */
+      <p>É como dizer "não pode ser menor que X, nem maior que Y, mas tenta ser Z". É o mais inteligente de todos!</p>
       
-      background-color: plum;
-      padding: 1rem;
-      border-radius: 8px;
-  }
+      <div class="exemplo">
+        <p><i class="fas fa-balance-scale"></i> Tamanho que se adapta com limites:</p>
+        <div style="background: #f0f0f0; padding: 15px; border-radius: 8px; text-align: center;">
+          <div style="background: #e85d04; color: white; padding: 15px; border-radius: 5px; font-size: clamp(14px, 4vw, 24px);">
+            <strong>font-size: clamp(14px, 4vw, 24px)</strong><br>
+            <small>Mínimo 14px, tenta 4% da tela, máximo 24px</small>
+          </div>
+        </div>
+        <p style="color: #666; font-style: italic;"><i class="fas fa-info-circle"></i> Redimensione a tela para ver a adaptação inteligente</p>
+      </div>
+      
+      <div class="codigo css">
+.texto-inteligente {
+  font-size: clamp(16px, 5vw, 32px);
+  /* Mínimo: 16px | Ideal: 5% da tela | Máximo: 32px */
+}
       </div>
     </section>
-    
+
     <div class="navegacao-tags">
-      <a href="layoutflexbox.html" class="voltar"><i class="fas fa-arrow-left"></i> Tags CSS</a>
-      <a href="index.html" class="voltar"
-      ><i class="fas fa-arrow-left"></i> Voltar ao Cardápio</a
-      >
+        <a href="layoutgrid.html" class="voltar"><i class="fas fa-arrow-left"></i> Layout Grid</a>
+        <a href="index.html"> Voltar ao Cardápio <i class="fas fa-arrow-right"></i></a>
     </div>
   </main>
 </body>
